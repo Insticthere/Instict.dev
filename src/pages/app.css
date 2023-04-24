@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css2?family=Martel+Sans:wght@800&family=Roboto&display=swap);@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);@import url(https://fonts.googleapis.com/css2?family=Raleway&display=swap);@import url(https://fonts.googleapis.com/css2?family=Cabin&display=swap);@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap);body {
+  color: #fff;
+  margin: 0;
+  transition: all .5s ease;
+  width: 100%
+}
+
+body {
+  font-family: Poppins,sans-serif;
+}
+
+.App {
+  background: transparent;
+  background-color: #04030c;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(255, 255, 255, 0.05) 10%,
+      rgba(255, 255, 255, 0.05) 10%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, 0.05) 10%,
+      rgba(255, 255, 255, 0.05) 10%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      45deg,
+      transparent 24%,
+      rgba(255, 255, 255, 0.05) 10%,
+      rgba(255, 255, 255, 0.05) 10%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, 0.05) 10%,
+      rgba(255, 255, 255, 0.05) 10%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 50px 50px;
+}
+
+/*#070514, #04030c, #0d1117*/
+
+.hovered {
+  animation-name: loop-background-hover;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.unhovered {
+  animation-name: loop-background;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loop-background-hover {
+  0% {
+    background-size: 50px 50px;
+  }
+
+  100% {
+    background-size: 25px 25px;
+  }
+}
+
+@keyframes loop-background {
+  0% {
+    background-size: 25px 25px;
+  }
+  100% {
+    background-size: 50px 50px;
+  }
+}
+
+.projectheading {
+  text-align: center;
+}
+
+.socials * {
+  display: inline-block;
+}
+
+.main {
+  
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  height: 100vh;
+  width: 100vw;
+
+  
+}
+
+.contents1 {
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
