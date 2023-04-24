@@ -1,6 +1,7 @@
 import "./app.css"; 
 import Navbar from "../components/Navbar";
 import Top from "../components/Top";
+import Activity from "../components/Activity"
 import React from "react";
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
 
         <div className="contents1 max-[420px]:ml-[5px] max-[420px]:mr-[5px] ">
           <Top />
-          {/* <Activity /> */}
+          <Activity />
         </div>
       </div>
     </div>

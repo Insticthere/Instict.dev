@@ -39,18 +39,17 @@ function Top() {
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
         onMouseMove={handleMouseMove} 
-        className="flex m-auto pt-[10%]">
-          <div >
+        className="grid pt-[10%] grid-cols-3 ml-auto mr-auto mt-10px">
+          <div className="col-span-2">
             <p style={{"fontFamily": "Roboto,sans-serif"}} className="text-[75px] m-0 md:text-[110px] 2xl:text-[125px] max-[420px]:text-[50px]">Instict</p>
-            <p style={{paddingLeft: "7px"}} >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat nisi at eros ultrices rhoncus. Nunc vitae varius ipsum, at sagittis lorem.</p>
+            <p style={{paddingLeft: "7px"}} className="w-[85%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat nisi at eros ultrices rhoncus. Nunc vitae varius ipsum, at sagittis lorem.</p>
           </div>
-          <div style={{width: "20px", height: "10%"}}>
-          </div>
-          <div>
+          {/* <div style={{width: "20px", height: "10%"}}> </div>*/}
+          <div className="col-span-1">
             <img
               src="https://i.ibb.co/xmMtYjv/avatar2.jpg"
               alt="pfp"
-              className="rounded-[11px] h-[100px] md:h-[200px] "
+              className="rounded-[11px] h-[100px] md:h-[200px] ml-[15px]"
             ></img>
           </div>
         </div>
