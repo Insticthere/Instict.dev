@@ -39,10 +39,10 @@ function Top() {
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
         onMouseMove={handleMouseMove} 
-        className="grid pt-[10%] grid-cols-3 ml-auto mr-auto mt-10px">
-          <div className="col-span-2">
-            <p style={{"fontFamily": "Roboto,sans-serif"}} className="text-[75px] m-0 md:text-[110px] 2xl:text-[125px] max-[420px]:text-[50px]">Instict</p>
-            <p style={{paddingLeft: "7px"}} className="w-[85%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat nisi at eros ultrices rhoncus. Nunc vitae varius ipsum, at sagittis lorem.</p>
+        className="grid pt-[10%] grid-cols-2 ml-auto mr-auto mt-10px">
+          <div className="col-span-1">
+            <p style={{"fontFamily": "Roboto,sans-serif"}} className="text-[50px] m-0 md:text-[110px] 2xl:text-[125px] min-[420px]:text-[50px]">Instict</p>
+            <p style={{paddingLeft: "7px"}} >*Insert cool quote here*</p>
           </div>
           {/* <div style={{width: "20px", height: "10%"}}> </div>*/}
           <div className="col-span-1">
