@@ -16,8 +16,12 @@ const [currentTrack, setCurrentTrack] = useState(null);
         const data = await response.json();
 
         // Get the first track from the response and set it as the current track
-        const currentTrack = data.recenttracks.track[0];
-        setCurrentTrack(currentTrack);
+        if (data.recenttracks.track.length > 0 && data.recenttracks.track[0]["@attr"]?.nowplaying === "true") {
+          const currentTrack = data.recenttracks.track[0];
+          setCurrentTrack(currentTrack);
+        } else {
+          setCurrentTrack(null);
+        }
       } catch (error) {
         console.error(error);
       }
@@ -34,7 +38,7 @@ const [currentTrack, setCurrentTrack] = useState(null);
       <div className="ml-[5px] mt-[10%]">
         <h1 className="text-white mt-[10px] mb-[10px] text-xl font-extrabold">Currently listening</h1>
         <div className="flex">
-          {currentTrack && (
+          {currentTrack ? (
             <div className="flex">
               <div className="text-center mr-4">
                 <img
@@ -46,16 +50,32 @@ const [currentTrack, setCurrentTrack] = useState(null);
               <div>
                 <h3 className="text-white text-[25px]">Spotify</h3>
                 <a
-                  className="text-white font-medium text-lg hover:underline" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
+                  className="text-white font-medium text-lg hover:underline w-3/4  block" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
                   {currentTrack.name}
                 </a>
                 <p className="text-gray-400 text-[15px]">{currentTrack.artist["#text"]}</p>
               </div>
             </div>
+          ) : (
+            <div className="flex">
+              <div className="text-center mr-4">
+                <img
+                  src={"https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc"}
+                  alt="Not Playing"
+                  className="rounded-md max-w-[125px] w-[100%] h-auto"
+                />
+              </div>
+              <div>
+                <h3 className="text-white text-[25px]">Spotify</h3>
+                <p
+                  className="text-white font-medium text-lg hover:underline">
+                  Not Playing anything
+                </p>
+              </div>
+            </div>
           )}
         </div>
-    </div>
-
+      </div>
     );
 }
   
