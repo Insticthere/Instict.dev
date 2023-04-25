@@ -7,15 +7,11 @@ import React from "react";
 function App() {
   return (
     <div className="App unhovered parallax ">
-
-      <div className="main ">
         <Navbar />
-
-        <div className="contents1 max-[420px]:ml-[5px] max-[420px]:mr-[5px]  w-[95%] md:w-[80%] xl:w-[60%]">
+        <div className="contents1 max-[420px]:ml-[5px] max-[420px]:mr-[5px] max-w-[1500px] w-[90%] grid">
           <Top />
           <Activity />
         </div>
-      </div>
     </div>
   );
 }
