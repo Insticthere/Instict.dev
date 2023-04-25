@@ -31,8 +31,8 @@ const [currentTrack, setCurrentTrack] = useState(null);
     }, []);
     
     return (
-      <div className="ml-[5px]">
-        <h1 className="text-white mt-[10px] mb-[10px] text-xl font-extrabold 2xl:mt-[30px] md:mt-[25px]" >Currently listening</h1>
+      <div className="ml-[5px] mt-[10%]">
+        <h1 className="text-white mt-[10px] mb-[10px] text-xl font-extrabold">Currently listening</h1>
         <div className="flex">
           {currentTrack && (
             <div className="flex">
@@ -40,16 +40,16 @@ const [currentTrack, setCurrentTrack] = useState(null);
                 <img
                   src={currentTrack.image[3]["#text"]}
                   alt="album cover"
-                  className="rounded-md h-[75px] w-[75px] md:h-[100px] md:w-[100px] 2xl:h-[125px] 2xl:w-[125px]"
+                  className="rounded-md max-w-[125px] w-[100%] h-auto"
                 />
               </div>
               <div>
-                <h3 className="text-white">Spotify</h3>
+                <h3 className="text-white text-[25px]">Spotify</h3>
                 <a
                   className="text-white font-medium text-lg hover:underline" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
                   {currentTrack.name}
                 </a>
-                <p className="text-gray-400">{currentTrack.artist["#text"]}</p>
+                <p className="text-gray-400 text-[15px]">{currentTrack.artist["#text"]}</p>
               </div>
             </div>
           )}

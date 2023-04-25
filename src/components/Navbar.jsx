@@ -1,21 +1,16 @@
 import React from "react";
 
-const desgin = {"navbar":{"display":"flex","justifyContent":"space-between","padding":"20px"},
-                "leftnavbar":{"color":"white"},
-                "rightnavbar":{"alignItems" : "end"},
-                "linkStyles" : {"margin":"10px","textDecoration":"none","color":"white"}}
-
 function Navbar() {
     
     return (
-        <header style={desgin.navbar}>
-        <div style={desgin.leftnavbar}>
+      <header className="flex justify-between p-[20px] text-white text-[20px]">
+        <div>
           <p>Instict</p>
         </div>
 
-        <div style={desgin.rightnavbar}>
-          <a href="/home" style={desgin.linkStyles}>About</a>
-          <a href="/" style={desgin.linkStyles}>About</a>
+        <div>
+          <a href="/" className="no-underline hover:underline m-0 ml-[10px] mr-[10px]">About</a>
+          <a href="/" className="no-underline hover:underline m-0 ml-[10px] mr-[10px]">About</a>
         </div>
       </header>
     );

@@ -35,23 +35,15 @@ function Top() {
   }
     
     return (
-        <div
-        onMouseEnter={handleHover}
-        onMouseLeave={handleMouseLeave}
-        onMouseMove={handleMouseMove} 
-        className="grid pt-[10%] grid-cols-2 ml-auto mr-auto mt-10px">
-          <div className="col-span-1">
-            <p style={{"fontFamily": "Roboto,sans-serif"}} className="text-[50px] m-0 md:text-[110px] 2xl:text-[125px] min-[420px]:text-[50px]">Instict</p>
-            <p style={{paddingLeft: "7px"}} >*Insert cool quote here*</p>
+        <div onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove} className="flex justify-center content-center flex-row gap-[1.25rem] mt-[10%] mx-auto mt-10px ">
+          <div className="flex justify-items-center items-center">
+            <p className="mr-[10px] text-[6rem] m-0  font-sans sm:text-[7rem] lg:text-[8.4rem] ">Instict</p>
           </div>
-          {/* <div style={{width: "20px", height: "10%"}}> </div>*/}
-          <div className="col-span-1">
-            <img
-              src="https://i.ibb.co/xmMtYjv/avatar2.jpg"
-              alt="pfp"
-              className="rounded-[11px] h-[100px] md:h-[200px] ml-[15px]"
-            ></img>
+          <div>
+            <img src="https://i.ibb.co/xmMtYjv/avatar2.jpg" alt="pfp" className="rounded-[11px] max-w-[275px] w-[100%] h-auto hover:scale-[1.05] hover:origin-top-left ease-in-out duration-300"></img>
           </div>
+
+
         </div>
     );
   }
