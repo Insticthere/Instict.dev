@@ -41,3 +41,9 @@ html {
     border-radius: 4px;
     border: 0px solid transparent;
   }
+
+  @media (max-width: 640px) {
+    .grid {
+        display: block;
+    }
+}

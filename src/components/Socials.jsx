@@ -3,7 +3,7 @@ import React from "react";
 function Socials() {
     
     return (
-          <div className="flex gap-3  justify-end pt-5 pr-4 ">
+          <div className="flex gap-3  justify-center pt-5 sm:pr-4 sm:justify-end">
             <div className="group">
               <a href="https://github.com/Insticthere" target="_blank" rel="noopener noreferrer">
                 <div className="flex items-center">
@@ -70,16 +70,16 @@ function Socials() {
   
   export default Socials;
 
-              {/* <div className="group w-fit">
-              <div className="flex items-center  group-hover:bg-custom rounded-full h-12  w-fit test">
-                  <div
-                    className="fa fa-reddit group-hover:scale-110"
-                    style={{
-                      fontSize: "48px",
-                      color: "#fd4500",
-                      backgroundColor: "transparent",
-                      borderRadius: "100%"
-                    }}></div>
-                    <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black px-2">okokok</p>
-              </div>
-            </div> */}
+            //   {/* <div className="group w-fit">
+            //   <div className="flex items-center  group-hover:bg-custom rounded-full h-12  w-fit test">
+            //       <div
+            //         className="fa fa-reddit group-hover:scale-110"
+            //         style={{
+            //           fontSize: "48px",
+            //           color: "#fd4500",
+            //           backgroundColor: "transparent",
+            //           borderRadius: "100%"
+            //         }}></div>
+            //         <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black px-2">okokok</p>
+            //   </div>
+            // </div> */}
