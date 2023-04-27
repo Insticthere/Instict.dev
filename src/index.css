@@ -42,8 +42,8 @@ html {
     border: 0px solid transparent;
   }
 
-  @media (max-width: 640px) {
+  /* @media (max-width: 640px) {
     .grid {
         display: block;
     }
-}
+} */

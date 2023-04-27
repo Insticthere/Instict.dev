@@ -4,7 +4,7 @@ import Top from "../components/Top";
 import Activity from "../components/Activity"
 import Toptracks from "../components/TopTracks"
 import Socials from "../components/Socials"
-import React, { useRef, useEffect } from 'react';
+import React, {useRef, useEffect} from 'react';
 
 function App() {
   const targetRef = useRef(null);
@@ -16,21 +16,18 @@ function App() {
       contentsRef.current.style.width = `${targetWidth}px`;
     }
   }, [targetRef]);
-
-
   return (
-    <div className="App unhovered parallax">
+    <div className="">
       <Navbar />
-      <div ref={contentsRef} className="contents1 max-w-[1000px] w-[95%] grid grid-row-2">
-        <div ref={targetRef}>
+      <div className="max-w-[1000px] mx-auto w-[95%]" ref={contentsRef}>
+        <div className="w-fit mx-auto" ref={targetRef}> 
           <Top />
           <Socials />
         </div>
-        <div className="sm:grid sm:grid-cols-2 mt-[7%] gap-[10px]">
+        <div className="mt-[7%] gap-[10px] w-fit grid grid-flow-col  grid-cols-[300px_minmax(auto,_600px)_300px] max-sm:grid-flow-row">
           <Activity />
           <Toptracks />
         </div>
-        
       </div>
     </div>
   );

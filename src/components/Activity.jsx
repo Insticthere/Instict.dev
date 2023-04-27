@@ -35,8 +35,8 @@ function Activity() {
     }, []);
 
     return (
-      <div>
-        <h1 className="text-white mt-[10px] mb-[10px] text-xl font-extrabold">Currently listening</h1>
+      <div className="col-span-1">
+        <h1 className="text-white mt-[10px] mb-[10px] text-xl font-extrabold ">Currently listening</h1>
         <div className="flex">
           {currentTrack ? (
             <div className="flex">
@@ -44,11 +44,11 @@ function Activity() {
                 <img
                   src={currentTrack.image}
                   alt="album cover"
-                  className="rounded-md max-w-[125px] w-[100%] h-auto"
+                  className="rounded-md max-w-[125px] w-[100%] h-auto min-w-[45px]"
                 />
               </div>
               <div>
-                <h3 className="text-white text-[25px]">Spotify</h3>
+                <h3 className="text-white text-[20px]">Spotify</h3>
                 <a
                   className="text-white font-medium text-lg hover:underline  block" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
                   {currentTrack.name}

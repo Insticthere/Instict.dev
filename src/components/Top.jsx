@@ -38,7 +38,7 @@ function Top() {
   });
 
   function handleMouseMove(event) {
-    const elem = document.querySelector(".parallax");
+    const elem = document.querySelector(".App");
     let _w = window.innerWidth / 2;
     let _h = window.innerHeight / 2;
     let _mouseX = event.clientX;
@@ -52,15 +52,16 @@ function Top() {
   }
     
   return (
-    <div onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove} className="flex justify-center content-center flex-row gap-[10px] mt-[10%] mx-auto mt-10px ">
+    <div onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove} className="flex flex-row gap-[10px] mt-[10%] mx-auto mt-10px overflow-x max-w-[800px]">
       <div className="flex flex-col justify-center items-center">
         <div className="flex justify-items-center items-center">
-          <p className="mr-[10px] text-[5rem] m-0  font-sans sm:text-[7rem] lg:text-[8.4rem] leading-[9rem]">Instict</p>
+          <p className="mr-[10px] text-[5rem] m-0  font-sans leading-[9rem]">Instict</p>
         </div>
         <p className="mt-2">{indianTime.format('YYYY-MM-DD')} · {indianTime.format("hh:mm:ss A")}</p>
       </div>
-      <div className="flex justify-center items-center">
-        <img src="https://i.ibb.co/xmMtYjv/avatar2.jpg" alt="pfp" className="rounded-[11px] max-w-[275px] min-w-[50px] w-[100%] h-auto hover:scale-[1.05] hover:origin-top-left ease-in-out duration-300"></img>
+      <div className="flex justify-center items-center relative">
+        <img src="/avatar.jpg" alt="pfp" 
+        className="rounded-[11px] h-auto w-[100%] hover:scale-[1.05] hover:origin-top-left ease-in-out duration-300 aspect-square max-w-xs min-w-[300px]" height={"300px"} width={"300px"}></img>
       </div>
     </div>
   );
