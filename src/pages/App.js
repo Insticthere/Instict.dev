@@ -26,7 +26,7 @@ function App() {
           <Top />
           <Socials />
         </div>
-        <div className="grid grid-row-2 sm:grid-cols-2 mt-[7%] gap-[10px]">
+        <div className="sm:grid sm:grid-cols-2 mt-[7%] gap-[10px]">
           <Activity />
           <Toptracks />
         </div>
