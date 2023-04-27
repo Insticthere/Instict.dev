@@ -21,8 +21,8 @@ function App() {
   return (
     <div className="App unhovered parallax">
       <Navbar />
-      <div ref={contentsRef} className="contents1 max-w-[1000px] w-[95%] grid grid-row-2">
-        <div ref={targetRef}>
+      <div className="contents1 max-w-[650px] w-[95%] grid grid-row-2">
+        <div >
           <Top />
           <Socials />
         </div>

@@ -27,7 +27,7 @@ function Toptracks() {
             </div>
             <div className="overflow-x-auto">
               <div className="flex">
-                {Toptracks.items.map((element, key) => (
+                {Toptracks.items?.map((element, key) => (
                     <div key={key} className="pl-[5px]">
                         <img src={element.album.images[0].url } alt="ok" className="w-[100px] max-w-none rounded-md"></img>
                         <p className="text-[15px]">{element.name}</p>

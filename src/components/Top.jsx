@@ -55,12 +55,12 @@ function Top() {
     <div onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove} className="flex justify-center content-center flex-row gap-[10px] mt-[10%] mx-auto mt-10px ">
       <div className="flex flex-col justify-center items-center">
         <div className="flex justify-items-center items-center">
-          <p className="mr-[10px] text-[5rem] m-0  font-sans sm:text-[7rem] lg:text-[8.4rem] leading-[9rem]">Instict</p>
+          <p className="mr-[10px] text-[5rem] m-0  font-sans instict leading-[9rem]">Instict</p>
         </div>
         <p className="mt-2">{indianTime.format('YYYY-MM-DD')} · {indianTime.format("hh:mm:ss A")}</p>
       </div>
       <div className="flex justify-center items-center">
-        <img src="https://i.ibb.co/xmMtYjv/avatar2.jpg" alt="pfp" className="rounded-[11px] max-w-[275px] min-w-[50px] w-[100%] h-auto hover:scale-[1.05] hover:origin-top-left ease-in-out duration-300"></img>
+        <img src="https://i.ibb.co/xmMtYjv/avatar2.jpg" alt="pfp" className="rounded-[11px] max-w-[240px] min-w-[50px] w-[100%] h-auto hover:scale-[1.05] hover:origin-top-left ease-in-out duration-300 aspect-square"></img>
       </div>
     </div>
   );

@@ -47,3 +47,7 @@ html {
         display: block;
     }
 }
+
+.instict {
+  font-size: calc(75px + (120 - 75) * ((100vw - 300px) / (1600 - 300)))
+}
