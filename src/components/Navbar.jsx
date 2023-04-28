@@ -1,19 +1,23 @@
 import React from "react";
 
 function Navbar() {
-    
-    return (
-      <header className="flex justify-between p-[20px] text-white text-[20px]">
-        <div>
-          <p>Instict</p>
-        </div>
+  const handleDarkModeToggle = () => {
+    document.body.classList.toggle("dark");
+  };
 
-        <div>
-          <a href="/" className="no-underline hover:underline m-0 ml-[10px] mr-[10px]">About</a>
-          <a href="/" className="no-underline hover:underline m-0 ml-[10px] mr-[10px]">About</a>
-        </div>
-      </header>
-    );
-  }
-  
-  export default Navbar;
+  return (
+    <header className="flex justify-between p-[20px] text-[20px]">
+      <div>
+        <p className="text-2xl">Instict</p>
+      </div>
+
+      <div>
+        <button onClick={handleDarkModeToggle}>
+          <img src="/lampwhite.png" alt="theme" className="w-[30px] h-[30px] dark:brightness-0 aspect-square"></img>
+        </button>
+      </div>
+    </header>
+  );
+}
+
+export default Navbar

@@ -19,18 +19,20 @@ function App() {
 
 
   return (
-    <div className="App unhovered parallax min-w-[100%] min-h-[100%]">
-      <Navbar />
-      <div className="contents1 max-w-[620px] w-[95%] grid grid-row-2 max-xl:max-w-[500px]">
-        <div >
-          <Top />
-          <Socials />
+    <div className="App unhovered parallax min-w-[100%] min-h-[100%] dark:text-black dark:bg-white dark:font-extrabold transition-colors duration-[500]">
+      <div className="transition">
+        <Navbar />
+        <div className="contents1 max-w-[650px] w-[95%] grid grid-row-2 max-xl:max-w-[500px]">
+          <div >
+            <Top />
+            <Socials />
+          </div>
+          <div className="sm:grid sm:grid-cols-2 mt-[7%] gap-[10px]">
+            <Activity />
+            <Toptracks />
+          </div>
+          
         </div>
-        <div className="sm:grid sm:grid-cols-2 mt-[7%] gap-[10px]">
-          <Activity />
-          <Toptracks />
-        </div>
-        
       </div>
     </div>
   );

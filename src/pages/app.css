@@ -12,6 +12,7 @@ body {
   font-family: Poppins,sans-serif;
   width: 100%;
   height: 100%;
+  
 }
 
 html, body {
@@ -25,7 +26,7 @@ html, body {
 
 .App {
   background: transparent;
-  background-color: #04030c;
+  background-color: #04030c ;
   color: white;
   margin: 0;
   padding: 0;
@@ -100,4 +101,31 @@ html, body {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.dark .App {
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0.5) 10%,
+      transparent 27%,
+      transparent 74%,
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0.5) 10%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      45deg,
+      transparent 24%,
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0.5) 10%,
+      transparent 27%,
+      transparent 74%,
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0.5) 10%,
+      transparent 77%,
+      transparent
+    );
 }

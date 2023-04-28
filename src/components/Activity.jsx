@@ -36,7 +36,7 @@ function Activity() {
 
     return (
       <div>
-        <h1 className="text-white mt-[10px] mb-[10px] text-xl font-extrabold">Currently listening</h1>
+        <h1 className="mt-[10px] mb-[10px] text-xl font-extrabold">Currently listening</h1>
         <div className="flex">
           {currentTrack ? (
             <div className="flex">
@@ -48,12 +48,12 @@ function Activity() {
                 />
               </div>
               <div>
-                <h3 className="text-white text-[25px]">Spotify</h3>
+                <h3 className=" text-[25px]">Spotify</h3>
                 <a
-                  className="text-white font-medium text-lg hover:underline  block" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
+                  className="font-medium text-lg hover:underline  block" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
                   {currentTrack.name}
                 </a>
-                <p className="text-gray-400 text-[15px]">{currentTrack.artist}</p>
+                <p className="text-gray-400 text-[15px] dark:text-[#4e4e4e]">{currentTrack.artist}</p>
               </div>
             </div>
           ) : (
@@ -68,7 +68,7 @@ function Activity() {
               <div>
                 {/* <h3 className="text-white text-[25px] mt-[1px]">Spotify</h3> */}
                 <a
-                  className="text-white font-medium text-lg hover:underline" href={"https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9"} target="_blank" rel="noopener noreferrer"> 
+                  className="font-medium text-lg hover:underline" href={"https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9"} target="_blank" rel="noopener noreferrer"> 
                   Not Playing
                 </a> - Spotify
               </div>
