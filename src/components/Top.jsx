@@ -27,7 +27,7 @@ function Top() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setIndianTime(dayjs().tz('Asia/Kolkata'));
-    }, 1000);
+    }, 500);
     return () => clearInterval(intervalId); // Clear the interval on unmount
   }, []);
 
@@ -52,7 +52,7 @@ function Top() {
   }
     
   return (
-    <div onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove} className="flex justify-center content-center flex-row gap-[10px] mt-[10%] mx-auto mt-10px ">
+    <div onMouseEnter={handleHover} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove} className="flex justify-between content-center flex-row gap-[10px] mt-[10%] mx-auto mt-10px ">
       <div className="flex flex-col justify-center items-center">
         <div className="flex justify-items-center items-center">
           <p className="mr-[10px] text-[5rem] m-0  font-sans instict leading-[9rem]">Instict</p>

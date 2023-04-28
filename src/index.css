@@ -42,12 +42,12 @@ html {
     border: 0px solid transparent;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     .grid {
         display: block;
     }
 }
 
 .instict {
-  font-size: calc(75px + (120 - 75) * ((100vw - 300px) / (1600 - 300)))
+  font-size: calc(70px + (120 - 70) * ((100vw - 300px) / (1600 - 300)))
 }

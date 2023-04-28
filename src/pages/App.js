@@ -19,9 +19,9 @@ function App() {
 
 
   return (
-    <div className="App unhovered parallax">
+    <div className="App unhovered parallax min-w-[100%] min-h-[100%]">
       <Navbar />
-      <div className="contents1 max-w-[650px] w-[95%] grid grid-row-2">
+      <div className="contents1 max-w-[620px] w-[95%] grid grid-row-2 max-xl:max-w-[500px]">
         <div >
           <Top />
           <Socials />

@@ -10,6 +10,16 @@ body {
   transition: all .5s ease;
   width: 100%;
   font-family: Poppins,sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
 }
 
 
@@ -20,6 +30,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
   background-image: linear-gradient(
       0deg,
       transparent 24%,
