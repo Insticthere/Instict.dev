@@ -1,9 +1,43 @@
-import React from "react";
+import { useState, useEffect } from 'react';
+import { useLanyardWS,  } from 'use-lanyard';
 
 function Socials() {
+  const [currentTrack, setCurrentTrack] = useState(null);   
+
+  const data = useLanyardWS("522317353917087745");
+
+  useEffect(() => {
+      let colors = {
+          offline: "#747f8d",
+          online: "#3ba55d",
+          idle: "#faa81a",
+          dnd: "#ed4245",
+          };
+      if (data) {
+          if (data.discord_status in colors) {
+              setCurrentTrack(colors[data.discord_status])
+              }
+      } else {
+          return
+      }
+
+  }, [data])
+
+    
+  const style = {
+      borderColor: currentTrack,
+      backgroundColor: currentTrack
+    }
     
     return (
-          <div className="flex gap-3  justify-center pt-5 sm:pr-5 sm:justify-end max-md:py-[10%]  ">
+      <div className='flex justify-between items-baseline sm:px-2'>
+        {data ? (<div className='w-6 h-6 flex gap-2 items-center relative '>
+            <div className="h-5 w-5 rounded-full flex-shrink-0 group" style={{backgroundColor: style.backgroundColor}}>
+            </div>
+            <p>{data.discord_status}</p>  
+          </div>) : <></>}
+
+          <div className="flex gap-3  justify-center pt-5  sm:justify-end max-sm:py-[7%]  ">
             <div className="group">
               <a href="https://github.com/Insticthere" target="_blank" rel="noopener noreferrer">
                 <div className="flex items-center">
@@ -65,6 +99,7 @@ function Socials() {
             </a>
             </div>
           </div>
+        </div>
     );
   }
   
