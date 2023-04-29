@@ -36,7 +36,7 @@ function Activity() {
 
     return (
       <div>
-        <h1 className="mt-[10px] mb-[10px] text-xl font-extrabold">Currently listening</h1>
+        <h1 className="mt-[10px] mb-[10px] text-xl font-extrabold max-w-[50%]  w-fit">Currently listening</h1>
         <div className="flex">
           {currentTrack ? (
             <div className="flex">
@@ -44,14 +44,14 @@ function Activity() {
                 <img
                   src={currentTrack.image}
                   alt="album cover"
-                  className="rounded-md max-w-[125px] w-[100%] h-auto"
+                  className="rounded-md max-w-[125px] w-[100%] h-auto min-w-[100px]"
                 />
               </div>
               <div>
                 <h3 className=" text-[25px]">Spotify</h3>
                 <a
-                  className="font-medium text-lg hover:underline  block" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
-                  {currentTrack.name}
+                  className="font-medium text-lg hover:underline block w-fit" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
+                  <p className="spotifytext">{currentTrack.name}</p>
                 </a>
                 <p className="text-gray-400 text-[15px] dark:text-[#4e4e4e]">{currentTrack.artist}</p>
               </div>
@@ -62,7 +62,7 @@ function Activity() {
                 <img
                   src={"/spotify.svg"}
                   alt="Not Playing"
-                  className="rounded-md max-w-[35px] w-[100%] h-auto"
+                  className="rounded-md max-w-[35px] w-[100%] h-auto min-w-[35px]"
                 />
               </div>
               <div>
@@ -75,7 +75,6 @@ function Activity() {
             </div>
           )}
         </div>
-        <div></div>
       </div>
     );
 }

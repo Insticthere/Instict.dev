@@ -3,7 +3,7 @@ import React from "react";
 function Socials() {
     
     return (
-          <div className="flex gap-3  justify-center pt-5 sm:pr-4 sm:justify-end max-md:py-[10%]  ">
+          <div className="flex gap-3  justify-center pt-5 sm:pr-5 sm:justify-end max-md:py-[10%]  ">
             <div className="group">
               <a href="https://github.com/Insticthere" target="_blank" rel="noopener noreferrer">
                 <div className="flex items-center">

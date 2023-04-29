@@ -52,3 +52,7 @@ html {
 .instict {
   font-size: calc(70px + (120 - 70) * ((100vw - 300px) / (1600 - 300)))
 }
+
+.spotifytext {
+  font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
