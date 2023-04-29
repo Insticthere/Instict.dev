@@ -60,7 +60,7 @@ function Top() {
         <p className="mt-2">{indianTime.format('DD-MM-YYYY')} · {indianTime.format("hh:mm:ss A")}</p>
       </div>
       <div className="flex justify-center items-center">
-        <img src="/avatar.jpg" alt="pfp" className="rounded-[11px] max-w-[240px] min-w-[50px] w-[100%] h-auto hover:scale-[1.05] hover:origin-top-left ease-in-out duration-300 aspect-square"></img>
+        <img src="/avatar.jpg" alt="pfp" className="rounded-[11px] max-w-[240px] min-w-[50px] w-[100%] h-auto hover:scale-[1.05] hover:origin-top-left ease-in-out duration-300 aspect-square" rel="preload"></img>
       </div>
     </div>
   );

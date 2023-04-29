@@ -33,13 +33,13 @@ function Discord() {
   return (
     <div>
       {data ? (
-        <div className=' w-fit'>
+        <div className='w-fit'>
             <h1 className='mt-[10px] mb-[10px] text-xl font-extrabold'>Discord</h1>
             <div className='flex gap-3 items-center pt-3'>
                 <div className='w-fit relative'>
-                    <img className="rounded-full w-24 h-24 aspect-square min-w-[100px] min-h-[100px]" src={"https://cdn.discordapp.com/avatars/522317353917087745/" + data.discord_user.avatar + ".webp?size=100"} alt='pfp'></img>
+                    <img className="rounded-full w-24 h-24 aspect-square min-w-[100px] min-h-[100px] border-2 border-[#232428] " src={"https://cdn.discordapp.com/avatars/522317353917087745/" + data.discord_user.avatar + ".webp?size=100"} alt='pfp' rel="preload"></img>
                     <div>
-                        <div className='w-6 h-6 translate-x-[-8px] translate-y-[-1px] border-black rounded-full absolute right-0 bottom-0 border-4 border-solid' style={{backgroundColor: style.backgroundColor}}></div>
+                        <div className='w-6 h-6 translate-x-[-8px] translate-y-[-2px] border-[#232428] rounded-full absolute right-0 bottom-0 border-[3px] border-solid' style={{backgroundColor: style.backgroundColor}}></div>
                     </div>
                 </div>
                 <div>

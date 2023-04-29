@@ -45,6 +45,7 @@ function Activity() {
                   src={currentTrack.image}
                   alt="album cover"
                   className="rounded-md max-w-[125px] w-[100%] h-auto min-w-[100px]"
+                  rel="preload"
                 />
               </div>
               <div>
