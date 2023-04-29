@@ -35,8 +35,8 @@ function Activity() {
     }, []);
 
     return (
-      <div>
-        <h1 className="mt-[10px] mb-[10px] text-xl font-extrabold max-w-[50%]  w-fit">Currently listening</h1>
+      <div className="justify-self-end max-sm:mt-[7%]">
+        <h1 className="mt-[10px] mb-[10px] text-xl font-extrabold max-w-[100%] w-fit">Currently listening</h1>
         <div className="flex">
           {currentTrack ? (
             <div className="flex">

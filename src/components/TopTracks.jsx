@@ -20,7 +20,7 @@ function Toptracks() {
     return (
         Toptracks ? 
 
-        <div className="col-span-2">
+        <div className="col-span-2 mt-[5%] max-sm:mt-[7%]">
             <div className="flex items-baseline w-fit">
                 <h1 className="mt-[10px] mb-[10px] text-xl font-extrabold">Top Tracks</h1>
                 <p className="pl-[5px]"> - last month</p>
