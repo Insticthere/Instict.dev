@@ -1,8 +1,18 @@
 import { useState, useEffect } from 'react';
 import { useLanyardWS,  } from 'use-lanyard';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+import 'dayjs/locale/en';
+
+dayjs.extend(utc); // Load utc plugin
+dayjs.extend(timezone); // Load timezone plugin
+dayjs.tz.setDefault('Asia/Kolkata'); 
+
 
 function Socials() {
-  const [currentTrack, setCurrentTrack] = useState(null);   
+  const [currentTrack, setCurrentTrack] = useState(null);  
+  const [indianTime, setIndianTime] = useState(dayjs().tz('Asia/Kolkata')); 
 
   const data = useLanyardWS("522317353917087745");
 
@@ -23,6 +33,13 @@ function Socials() {
 
   }, [data])
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndianTime(dayjs().tz('Asia/Kolkata'));
+    }, 500);
+    return () => clearInterval(intervalId); // Clear the interval on unmount
+  }, []);
+
     
   const style = {
       borderColor: currentTrack,
@@ -30,91 +47,92 @@ function Socials() {
     }
     
     return (
-      <div className='flex justify-between items-baseline sm:px-2'>
-        {data ? (<div className='w-6 h-6 flex gap-2 items-center relative '>
-            <div className="h-5 w-5 rounded-full flex-shrink-0 group" style={{backgroundColor: style.backgroundColor}}>
-            </div>
-            <p>{data.discord_status}</p>  
-          </div>) : <></>}
+      <div className='sm:px-2 mt-5'>
+        <div className='flex justify-between items-center'>
+          {data ? (
+        <div className='w-5 h-5 flex gap-0 items-center relative'>
+          <div className="h-[18px] w-[18px] rounded-full flex-shrink-0 group" style={{backgroundColor: style.backgroundColor}}>
+          </div>
+          <p className='pl-2 h-'>{data.discord_status}</p>  
+        </div>) :  <StatusFallback />}
 
-          <div className="flex gap-3  justify-center pt-5  sm:justify-end max-sm:py-[7%]  ">
-            <div className="group">
-              <a href="https://github.com/Insticthere" target="_blank" rel="noopener noreferrer">
+            <div className="flex gap-3 justify-center sm:justify-end">
+              <div className="group">
+                <a href="https://github.com/Insticthere" target="_blank" rel="noopener noreferrer" aria-label="github">
+                  <div className="flex items-center">
+                        <div
+                        className="fa fa-github hover:scale-[1.1] dark:!text-black ease-in-out duration-300"
+                        style={{
+                          fontSize: "28px",
+                          color: "white",
+                          backgroundColor: "transparent",
+                          borderRadius: "100%"
+                        }}></div>
+                        
+                  </div>
+                </a>
+              </div>
+              <div className="group">
+                <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" aria-label="spotify">
+                  <div className="flex items-center">
+                        <div
+                        className="fa fa-spotify hover:scale-[1.1] ease-in-out duration-300"
+                        style={{
+                          fontSize: "28px",
+                          color: "#1DB954",
+                          backgroundColor: "transparent",
+                          borderRadius: "100%"
+                        }}></div>
+                        
+                  </div>
+                </a>
+              </div>
+              <div className="group">
+              <a href="https://discordapp.com/users/522317353917087745/" target="_blank" rel="noopener noreferrer" aria-label="discord">
                 <div className="flex items-center">
                       <div
-                      className="fa fa-github hover:scale-[1.1] dark:!text-black"
+                      className="fa-brands fa-discord hover:scale-[1.1] ease-in-out duration-300"
                       style={{
-                        fontSize: "30px",
-                        color: "white",
+                        fontSize: "28px",
+                        color: "#5865F2",
                         backgroundColor: "transparent",
                         borderRadius: "100%"
                       }}></div>
                       
                 </div>
               </a>
-            </div>
-            <div className="group" target="_blank" rel="noopener noreferrer">
-                      <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9">
-              <div className="flex items-center">
-                    <div
-                    className="fa fa-spotify hover:scale-[1.1]"
-                    style={{
-                      fontSize: "30px",
-                      color: "#1DB954",
-                      backgroundColor: "transparent",
-                      borderRadius: "100%"
-                    }}></div>
-                    
               </div>
+              <div className="group">
+              <a href="mailto:queriesinstict@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="email">
+                <div className="flex items-center">
+                      <div
+                      className="fa fa-envelope hover:scale-[1.1] dark:!text-black duration-75"
+                      style={{
+                        fontSize: "28px",
+                        color: "white",
+                        backgroundColor: "transparent",
+                        borderRadius: "100%"
+                      }}></div>
+                </div>
               </a>
-            </div>
-            <div className="group" target="_blank" rel="noopener noreferrer">
-            <a href="https://discordapp.com/users/522317353917087745/">
-              <div className="flex items-center">
-                    <div
-                    className="fa-brands fa-discord hover:scale-[1.1] "
-                    style={{
-                      fontSize: "30px",
-                      color: "#5865F2",
-                      backgroundColor: "transparent",
-                      borderRadius: "100%"
-                    }}></div>
-                    
               </div>
-            </a>
-            </div>
-            <div className="group">
-            <a href="mailto:queriesinstict@gmail.com">
-              <div className="flex items-center">
-                    <div
-                    className="fa fa-envelope hover:scale-[1.1] dark:!text-black"
-                    style={{
-                      fontSize: "30px",
-                      color: "white",
-                      backgroundColor: "transparent",
-                      borderRadius: "100%"
-                    }}></div>
-                    
-              </div>
-            </a>
             </div>
           </div>
+          <hr className="w-full my-4 bg-slate-800 border-none h-0.5"></hr>
+          <p className="mt-2">{indianTime.format('ddd')} · {indianTime.format('MMM DD')} · {indianTime.format("hh:mm:ss A")}</p>
         </div>
     );
   }
   
-  export default Socials;
+export default Socials;
 
-            //   {/* <div className="group w-fit">
-            //   <div className="flex items-center  group-hover:bg-custom rounded-full h-12  w-fit test">
-            //       <div
-            //         className="fa fa-reddit group-hover:scale-110"
-            //         style={{
-            //           fontSize: "48px",
-            //           color: "#fd4500",
-            //           backgroundColor: "transparent",
-            //           borderRadius: "100%"
-            //         }}></div>
-            //         <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black px-2">okokok</p>
-            //   </div>
-            // </div> */}
+function StatusFallback( ) {
+  return(
+    <div>
+      <div className='w-5 h-5 flex gap-0 items-center relative '>
+        <div className="h-[14px] w-[14px] rounded-full flex-shrink-0 group bg-[#151515]"></div>
+        <div className="h-[14px] w-[60px] rounded-full flex-shrink-0 group bg-[#151515] mx-2"></div>
+      </div>
+    </div>
+  )
+}

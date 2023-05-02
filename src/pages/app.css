@@ -93,13 +93,6 @@ html, body {
   }
 }
 
-.contents1 {
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .dark .App {
   background-image: linear-gradient(
       0deg,

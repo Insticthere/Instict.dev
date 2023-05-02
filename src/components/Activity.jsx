@@ -1,13 +1,18 @@
-import React, {useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import { getNowPlaying } from "../spotify";
+const client_id = import.meta.env.VITE_CLIENTID
+const client_secret = import.meta.env.VITE_CLIENTSEC
+const refresh_token = import.meta.env.VITE_REFRESHTOK
 
-function Activity() {
+const basic = btoa(`${client_id}:${client_secret}`)
+
+function Activity(props) {
   const [currentTrack, setCurrentTrack] = useState(null);
 
   useEffect(() => {
     const fetchCurrentTrack = async () => {
       try {
-        const response = await getNowPlaying();
+        const response = await getNowPlaying(basic,refresh_token);
         if (response.ok) {
           const data = await response?.json();
           if (data.is_playing) {
@@ -30,26 +35,49 @@ function Activity() {
     };
 
     fetchCurrentTrack();
-    const intervalId = setInterval(fetchCurrentTrack, 5000);
+    const intervalId = setInterval(fetchCurrentTrack, 5500);
     return () => clearInterval(intervalId);
     }, []);
 
     return (
-      <div className="justify-self-end max-sm:mt-[7%]">
-        <h1 className="mt-[10px] mb-[10px] text-xl font-extrabold max-w-[100%] w-fit">Currently listening</h1>
-        <div className="flex">
+      <div>
+        <div>
           {currentTrack ? (
+            (props.visible === "true") ? 
+            <>
+            <p className="pb-2">Currently Playing</p>
             <div className="flex">
               <div className="text-center mr-4">
                 <img
                   src={currentTrack.image}
                   alt="album cover"
-                  className="rounded-md max-w-[125px] w-[100%] h-auto min-w-[100px]"
+                  className="rounded-md max-w-[100px] w-[100%] h-auto min-w-[50px]"
                   rel="preload"
                 />
               </div>
               <div>
-                <h3 className=" text-[25px]">Spotify</h3>
+                <h3 className="text-[25px]">Spotify</h3>
+                <a
+                  className="font-medium text-lg hover:underline block w-fit" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
+                  <p className="spotifytext">{currentTrack.name}</p>
+                </a>
+                <p className="text-gray-400 text-[15px] dark:text-[#4e4e4e]">{currentTrack.artist}</p>
+              </div>
+            </div> 
+            <hr className="w-full my-4 bg-slate-800 border-none h-0.5"></hr>
+            </>
+            : (
+              <div className="flex">
+              <div className="text-center mr-4">
+                <img
+                  src={currentTrack.image}
+                  alt="album cover"
+                  className="rounded-md max-w-[100px] w-[100%] h-auto min-w-[50px]"
+                  rel="preload"
+                />
+              </div>
+              <div>
+                <h3 className="text-[25px]">Spotify</h3>
                 <a
                   className="font-medium text-lg hover:underline block w-fit" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
                   <p className="spotifytext">{currentTrack.name}</p>
@@ -57,24 +85,27 @@ function Activity() {
                 <p className="text-gray-400 text-[15px] dark:text-[#4e4e4e]">{currentTrack.artist}</p>
               </div>
             </div>
-          ) : (
-            <div className="flex align-middle items-center w-fit">
-              <div className="text-center mr-2">
-                <img
-                  src={"/spotify.svg"}
-                  alt="Not Playing"
-                  className="rounded-md max-w-[35px] w-[100%] h-auto min-w-[35px]"
-                />
-              </div>
-              <div>
-                {/* <h3 className="text-white text-[25px] mt-[1px]">Spotify</h3> */}
-                <a
-                  className="font-medium text-lg hover:underline" href={"https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9"} target="_blank" rel="noopener noreferrer"> 
-                  Not Playing
-                </a> - Spotify
-              </div>
-            </div>
-          )}
+            )
+          ) : 
+            (props.visible === "true") ?
+              <>
+              <hr className="w-full mt-4 bg-slate-800 border-none h-0.5"></hr>
+              </>
+              : <>
+              <a className="font-medium text-lg group gap-2 w-fit flex pt-2" href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer">
+                                      <div
+                                        className="fa fa-spotify bottom-0 flex no-underline"
+                                        style={{
+                                          fontSize: "30px",
+                                          color: "#1DB954",
+                                          backgroundColor: "transparent",
+                                          borderRadius: "100%"
+                                        }}></div>
+                    <p className="spotifytext group-hover:underline">Not listening to anything</p>
+              </a>
+              </>
+
+          }
         </div>
       </div>
     );

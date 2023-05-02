@@ -1,15 +1,10 @@
-const client_id = process.env.REACT_APP_CLIENT_ID
-const client_secret = process.env.REACT_APP_CLIENT_SEC
-const refresh_token = process.env.REACT_APP_REFRESH_TOK
-
-const basic = btoa(`${client_id}:${client_secret}`)
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`
-const TOP_TRACKS_ENDPOINT = 'https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=10'
+
 
 // This function gets the access token so that we can access the API
 
-const getAccessToken = async () => {
+const getAccessToken = async (basic, refresh_token) => {
   const response = await fetch(TOKEN_ENDPOINT, {
     method: 'POST',
     headers: {
@@ -26,8 +21,8 @@ const getAccessToken = async () => {
 
 // We use the aforementioned access token and send it with the request to the API
 // this requests gets the currently playing song.
-export const getNowPlaying = async () => {
-  const { access_token } = await getAccessToken()
+export const getNowPlaying = async (basic, refresh_token) => {
+  const { access_token } = await getAccessToken(basic, refresh_token)
 
   return fetch(NOW_PLAYING_ENDPOINT, {
     headers: {
@@ -37,8 +32,9 @@ export const getNowPlaying = async () => {
   
 }
 
-export const getTopTracks = async () => {
-  const { access_token } = await getAccessToken()
+export const getTopTracks = async (basic, refresh_token, term) => {
+  const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=${term}&limit=30`
+  const { access_token } = await getAccessToken(basic, refresh_token)
   const response = await fetch(TOP_TRACKS_ENDPOINT, {
     method: 'GET',
     headers: {
