@@ -1,10 +1,10 @@
-import './App.css'
+import './app.css'
 import Navbar from "../components/Navbar";
 import Home from "./Home"
 import Songs from './Songs';
 import Footer from '../components/Footer';
 import { useEffect } from "react";
-import { BrowserRouter,Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   useEffect(() => {
