@@ -23,7 +23,6 @@ const getAccessToken = async (basic, refresh_token) => {
 // this requests gets the currently playing song.
 export const getNowPlaying = async (basic, refresh_token) => {
   const { access_token } = await getAccessToken(basic, refresh_token)
-
   return fetch(NOW_PLAYING_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${access_token}`,
@@ -35,13 +34,13 @@ export const getNowPlaying = async (basic, refresh_token) => {
 export const getTopTracks = async (basic, refresh_token, term) => {
   const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=${term}&limit=30`
   const { access_token } = await getAccessToken(basic, refresh_token)
-  const response = await fetch(TOP_TRACKS_ENDPOINT, {
+  const response_getTopTracks = await fetch(TOP_TRACKS_ENDPOINT, {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${access_token}`
     }
   })
-  const data = await response.json()
+  const data = await response_getTopTracks.json()
   
   return data
 }

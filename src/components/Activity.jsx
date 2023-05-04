@@ -12,9 +12,9 @@ function Activity(props) {
   useEffect(() => {
     const fetchCurrentTrack = async () => {
       try {
-        const response = await getNowPlaying(basic,refresh_token);
+        let response = await getNowPlaying(basic,refresh_token);
         if (response.ok) {
-          const data = await response?.json();
+          let data = await response.json()
           if (data.is_playing) {
             const currentTrack = {
               name: data.item.name,
@@ -40,7 +40,7 @@ function Activity(props) {
     }, []);
 
     return (
-      <div>
+      <div className="px-2">
         <div>
           {currentTrack ? (
             (props.visible === "true") ? 

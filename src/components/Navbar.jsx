@@ -23,7 +23,7 @@ function Navbar() {
       </div>
 
       <div>
-        <button onClick={handleDarkModeToggle} className='w-5 h-5'>{dark ? <i className="fa-regular fa-sun w-5 h-5"></i> : <i className="fa-solid fa-moon w-5 h-5"></i>}</button>
+        <button onClick={handleDarkModeToggle} className='w-5 h-5'>{dark ? <i className="fa-solid fa-sun"></i> : <i className="fa-solid fa-moon w-5 h-5"></i>}</button>
       </div>
     </header>
   );

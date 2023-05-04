@@ -128,11 +128,9 @@ export default Socials;
 
 function StatusFallback( ) {
   return(
-    <div>
-      <div className='w-5 h-5 flex gap-0 items-center relative '>
-        <div className="h-[14px] w-[14px] rounded-full flex-shrink-0 group bg-[#151515]"></div>
-        <div className="h-[14px] w-[60px] rounded-full flex-shrink-0 group bg-[#151515] mx-2"></div>
-      </div>
+    <div className='w-5 h-5 flex gap-0 items-center relative animate-pulse'>
+      <div className="h-[14px] w-[14px] rounded-full flex-shrink-0 bg-gradient-to-r from-[#151515] to-[#1E1E1E]"></div>
+      <div className="h-[14px] w-[60px] rounded-full flex-shrink-0 bg-gradient-to-r from-[#151515] to-[#1E1E1E] mx-2"></div>
     </div>
   )
 }
