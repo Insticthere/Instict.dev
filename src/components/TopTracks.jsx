@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, Suspense } from "react";
 import { getTopTracks } from "../spotify";
 
 const client_id = import.meta.env.VITE_CLIENTID
@@ -33,7 +33,9 @@ function Toptracks(props) {
                 {Toptracks ?  Toptracks.items?.map((element, key) => (
                   <a href={element.external_urls.spotify} key={key}>
                     <div className="group col-span-1 row-span-1 snap-start relative overflow-hidden rounded-md ">
+                    <Suspense fallback={<div className=" max-w-none w-[200px] h-[200px] rounded scroll scrollbar-hide bg-[#151515]"></div>}> 
                       <img src={element.album.images[0].url } alt={element.name} className="w-[200px] max-w-none group-hover:scale-[1.02] group-hover:blur-[0.5px] duration-150 ease-in-out group-hover:brightness-50"></img>
+                    </Suspense>
                       <div className="absolute inset-2">
                         <p className="text-lg hidden group-hover:block overflow-ellipsis dark:text-white">{element.name}</p>
                         <p className="text-xs hidden group-hover:block overflow-ellipsis dark:text-white">{element.artists[0].name}</p>

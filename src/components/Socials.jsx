@@ -118,7 +118,7 @@ function Socials() {
               </div>
             </div>
           </div>
-          <hr className="w-full my-4 bg-slate-800 border-none h-0.5"></hr>
+          <hr className="w-full my-4 bg-gray-600 border-none h-[1px]"></hr>
           <p className="mt-2">{indianTime.format('ddd')} · {indianTime.format('MMM DD')} · {indianTime.format("hh:mm:ss A")}</p>
         </div>
     );

@@ -64,7 +64,7 @@ function Activity(props) {
                 <p className="text-gray-400 text-[15px] dark:text-[#4e4e4e]">{currentTrack.artist}</p>
               </div>
             </div> 
-            <hr className="w-full my-4 bg-slate-800 border-none h-0.5"></hr>
+            <hr className="w-full my-4 bg-gray-600 border-none h-[1px]"></hr>
             </>
             : (
               <div className="flex">
@@ -92,7 +92,7 @@ function Activity(props) {
               <hr className="w-full mt-4 bg-slate-800 border-none h-0.5"></hr>
               </>
               : <>
-              <a className="font-medium text-lg group gap-2 w-fit flex pt-2" href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer">
+              <a className="font-medium text-lg group gap-2 w-fit flex" href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer">
                                       <div
                                         className="fa fa-spotify bottom-0 flex no-underline"
                                         style={{
