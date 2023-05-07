@@ -42,7 +42,7 @@ html {
   }
 
 .instict {
-  font-size: clamp(50px, 17vw, 110px); 
+  font-size: clamp(75px, 17vw, 110px); 
   font-family: 'Outfit', sans-serif;
 }
 
@@ -74,4 +74,8 @@ html {
 
 .animate-skeleton {
   animation: skeleton 1s ease-in-out infinite;
+}
+
+.navbar-blur {
+  backdrop-filter: blur(4px);
 }

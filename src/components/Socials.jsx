@@ -47,7 +47,7 @@ function Socials() {
     }
     
     return (
-      <div className='sm:px-2 mt-5'>
+      <div className='px-2 mt-5'>
         <div className='flex justify-between items-center'>
           {data ? (
         <div className='w-5 h-5 flex gap-0 items-center relative'>
