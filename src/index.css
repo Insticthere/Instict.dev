@@ -54,7 +54,6 @@ html {
   display: none !important;
 }
 
-/* For IE, Edge and Firefox */
 .scrollbar-hide {
   -ms-overflow-style: none !important;  /* IE and Edge */
   scrollbar-width: none !important;  /* Firefox */
@@ -74,8 +73,4 @@ html {
 
 .animate-skeleton {
   animation: skeleton 1s ease-in-out infinite;
-}
-
-.navbar-blur {
-  backdrop-filter: blur(4px);
 }

@@ -1,7 +1,6 @@
 import Top from "../components/Top";
 import Activity from "../components/Activity"
 import Socials from "../components/Socials"
-import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import { useState, useEffect } from "react";
 
@@ -51,7 +50,7 @@ function Home() {
           <Top />
           <Socials />
         </div>
-        <div className="mt-3 pb-[5%]">
+        <div className="mt-3 pb-[5%] ">
           <div>
             <Activity visible="false"/>
             <Projects />

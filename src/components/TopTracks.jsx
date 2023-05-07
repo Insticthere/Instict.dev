@@ -28,7 +28,7 @@ function Toptracks(props) {
             <h1 className="mt-[10px] mb-[10px] text-xl font-extrabold">Top Tracks</h1>
             <p className="pl-[5px]"> - {props.name}</p>
           </div>
-          <div className="relative w-[98vw] ml-[calc(-49vw+300px)] max-sm:mx-[auto]  ">
+          <div className="relative w-[98vw] ml-[calc(-49vw+325px)] max-sm:mx-[auto]  ">
               <div className="grid grid-flow-col grid-rows-2 overflow-x-auto gap-2 scrollbar-hide">
                 {Toptracks ?  Toptracks.items?.map((element, key) => (
                   <a href={element.external_urls.spotify} key={key}>
