@@ -30,13 +30,16 @@ function Projects() {
             <p className='text-center'>random timepass projects</p>
             <div className="pt-2">
                 <div className="rounded-lg bg-[#34343433] dark:bg-[#b1b1b175] backdrop-blur-sm mb-2 w-full p-4 flex justify-between">
-                    <div className='flex flex-col justify-between w-full'>
+                    <div className='flex flex-col justify-between w-full' href='https://discord.com/oauth2/authorize?client_id=952146365364977674&permissions=414464658496&scope=bot%20applications.commands'>
                         <div className='flex w-full justify-between'>
                             <div className='flex items-center gap-2 mb-1'>
-                                <img src='/avatar.jpg' alt='ok' className='w-4 h-4 rounded-full' />
+                                <img src='/avatar.jpg' alt='ok' className='w-4 h-4 rounded-full aspect-square' />
                                 <p className='text-xs'><a href='https://github.com/Insticthere'>Insticthere</a></p>
                             </div>
-                            <a className="fa-solid fa-link" href="/"></a>
+                            <a href='https://discord.com/oauth2/authorize?client_id=952146365364977674&permissions=414464658496&scope=bot%20applications.commands' target="_blank" rel="noopener noreferrer">
+                                <img src='/icons/link.png' className='h-4 w-4 invert dark:invert-0'></img>
+                            </a>
+                            
                         </div>
                         <div>
                             <p className="text-xl my-1">OPPA</p>
@@ -47,30 +50,35 @@ function Projects() {
                 </div>
 
                 <div className="rounded-lg bg-[#34343433] dark:bg-[#b1b1b175] backdrop-blur-sm mb-2 w-full p-4 flex justify-between">
-                    <div className='flex flex-col justify-between w-full'>
+                    <div className='flex flex-col justify-between w-full' >
                         <div className='flex w-full justify-between'>
                             <div className='flex items-center gap-2 mb-1'>
-                                <img src='/avatar.jpg' alt='ok' className='w-4 h-4 rounded-full' />
+                                <img src='/avatar.jpg' alt='ok' className='w-4 h-4 rounded-full aspect-square' />
                                 <p className='text-xs'><a href='https://github.com/Insticthere'>Insticthere</a></p>
                             </div>
-                            <a className="fa-solid fa-link" href="/"></a>
+                            <a href='https://nasa-api-explorer-xi.vercel.app/' target="_blank" rel="noopener noreferrer">
+                            <img src='/icons/link.png' className='h-4 w-4 invert dark:invert-0'></img>
+                            </a>
+                            
                         </div>
                         <div>
                             <p className="text-xl my-1">Nasa api explorer</p>
                             <p className='text-sm pb-0.5'>A Nasa api explorer made in react using the <a href='https://api.nasa.gov/'  target="_blank" rel="noreferrer">Nasa Api.</a></p>
                             <p className='text-sm'>React · Last updated on {nasaRepoUpdated}</p>
-                        </div>
+                        </div>  
                     </div>
                 </div>
                 
                 <div className="rounded-lg bg-[#34343433] dark:bg-[#b1b1b175] backdrop-blur-sm mb-2 w-full p-4 flex justify-between">
-                    <div className='flex flex-col justify-between w-full'>
+                    <div className='flex flex-col justify-between w-full' >
                         <div className='flex w-full justify-between'>
                             <div className='flex items-center gap-2 mb-1'>
                                 <img src='/avatar.jpg' alt='ok' className='w-4 h-4 rounded-full' />
                                 <p className='text-xs'><a href='https://github.com/Insticthere'>Insticthere</a></p>
                             </div>
-                            <a className="fa-solid fa-link" href="/"></a>
+                            <a href='https://github.com/Insticthere/Instict.dev' target="_blank" rel="noopener noreferrer">
+                            <img src='/icons/link.png' className='h-4 w-4 invert dark:invert-0 aspect-square'></img>
+                            </a>
                         </div>
                         <div>
                             <p className="text-xl my-1">My Website</p>

@@ -57,64 +57,26 @@ function Socials() {
         </div>) :  <StatusFallback />}
 
             <div className="flex gap-3 justify-center sm:justify-end">
+            <div className="group">
+                <a href="https://discordapp.com/users/522317353917087745/" target="_blank" rel="noopener noreferrer" aria-label="discord">
+                  <div className="flex items-center">
+                    <img src='/icons/discord.png' className='h-8 w-8 hover:scale-[1.1] ease-in-out duration-300 aspect-square'></img>
+                  </div>
+                </a>
+              </div>
               <div className="group">
                 <a href="https://github.com/Insticthere" target="_blank" rel="noopener noreferrer" aria-label="github">
-                  <div className="flex items-center">
-                        <div
-                        className="fa fa-github hover:scale-[1.1] dark:!text-black ease-in-out duration-300"
-                        style={{
-                          fontSize: "28px",
-                          color: "white",
-                          backgroundColor: "transparent",
-                          borderRadius: "100%"
-                        }}></div>
-                        
+                  <div className="flex items-center ">
+                    <img src='/icons/github.png' className='h-7 w-7 invert dark:invert-0 hover:scale-[1.1] ease-in-out duration-300 aspect-square'></img>
                   </div>
                 </a>
               </div>
               <div className="group">
                 <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" aria-label="spotify">
                   <div className="flex items-center">
-                        <div
-                        className="fa fa-spotify hover:scale-[1.1] ease-in-out duration-300"
-                        style={{
-                          fontSize: "28px",
-                          color: "#1DB954",
-                          backgroundColor: "transparent",
-                          borderRadius: "100%"
-                        }}></div>
-                        
+                    <img src='/icons/spotify.png' className='h-7 w-7 hover:scale-[1.1] ease-in-out duration-300 aspect-square'></img>
                   </div>
                 </a>
-              </div>
-              <div className="group">
-              <a href="https://discordapp.com/users/522317353917087745/" target="_blank" rel="noopener noreferrer" aria-label="discord">
-                <div className="flex items-center">
-                      <div
-                      className="fa-brands fa-discord hover:scale-[1.1] ease-in-out duration-300"
-                      style={{
-                        fontSize: "28px",
-                        color: "#5865F2",
-                        backgroundColor: "transparent",
-                        borderRadius: "100%"
-                      }}></div>
-                      
-                </div>
-              </a>
-              </div>
-              <div className="group">
-              <a href="mailto:queriesinstict@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="email">
-                <div className="flex items-center">
-                      <div
-                      className="fa fa-envelope hover:scale-[1.1] dark:!text-black duration-75"
-                      style={{
-                        fontSize: "28px",
-                        color: "white",
-                        backgroundColor: "transparent",
-                        borderRadius: "100%"
-                      }}></div>
-                </div>
-              </a>
               </div>
             </div>
           </div>

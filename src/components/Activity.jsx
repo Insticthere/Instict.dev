@@ -14,17 +14,22 @@ function Activity(props) {
       try {
         let response = await getNowPlaying(basic,refresh_token);
         if (response.ok) {
-          let data = await response.json()
-          if (data.is_playing) {
-            const currentTrack = {
-              name: data.item.name,
-              artist: data.item.artists.map((artist) => artist.name).join(", "),
-              image: data.item.album.images[0].url,
-              url: data.item.external_urls.spotify,
-            };
-            setCurrentTrack(currentTrack);
+          let data = await response.text(); // retrieve the response body as text
+          if (data) { // check if the response body is not empty
+            data = JSON.parse(data); // parse the response body as JSON
+            if (data.is_playing) {
+              const currentTrack = {
+                name: data.item.name,
+                artist: data.item.artists.map((artist) => artist.name).join(", "),
+                image: data.item.album.images[0].url,
+                url: data.item.external_urls.spotify,
+              };
+              setCurrentTrack(currentTrack);
+            } else {
+              setCurrentTrack(null);
+            }
           } else {
-            setCurrentTrack(null);
+            setCurrentTrack(null); // handle empty response body
           }
         } else {
           setCurrentTrack(null);
@@ -93,14 +98,7 @@ function Activity(props) {
               </>
               : <>
               <a className="font-medium text-lg group gap-2 w-fit flex" href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer">
-                                      <div
-                                        className="fa fa-spotify bottom-0 flex no-underline"
-                                        style={{
-                                          fontSize: "30px",
-                                          color: "#1DB954",
-                                          backgroundColor: "transparent",
-                                          borderRadius: "100%"
-                                        }}></div>
+                <img src='/icons/spotify.png' className='h-8 w-8'></img>
                     <p className="spotifytext group-hover:underline">Not listening to anything</p>
               </a>
               </>
