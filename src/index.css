@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --pgwidth: 700px;
+  --songwidth : calc(-49vw + (var(--pgwidth)*0.5))
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;

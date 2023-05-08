@@ -28,8 +28,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App unhovered parallax min-w-[100vw] min-h-[100vh] dark:text-black dark:bg-white dark:font-extrabold transition-colors duration-[200ms] h-full w-full pb-9">
-        <div className="mx-auto max-w-[650px] w-[95%] transition">
-          <Navbar />
+        <Navbar />
+        <div className="mx-auto max-w-[var(--pgwidth)] w-[95%] transition">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Songs />} />
