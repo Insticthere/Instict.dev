@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react';
-import { useLanyardWS,  } from 'use-lanyard';
+import { useLanyardWS } from 'use-lanyard';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
 import 'dayjs/locale/en';
 
-dayjs.extend(utc); // Load utc plugin
-dayjs.extend(timezone); // Load timezone plugin
+dayjs.extend(utc);
+dayjs.extend(timezone);
 dayjs.tz.setDefault('Asia/Kolkata'); 
 
 
 function Socials() {
   const [currentTrack, setCurrentTrack] = useState(null);  
-  const [indianTime, setIndianTime] = useState(dayjs().tz('Asia/Kolkata')); 
+  const [indianTime, setIndianTime] = useState(dayjs().tz('Asia/Kolkata'));
 
-  const data = useLanyardWS("522317353917087745");
+  const data = useLanyardWS("522317353917087745")
 
   useEffect(() => {
       let colors = {
@@ -23,7 +23,9 @@ function Socials() {
           idle: "#faa81a",
           dnd: "#ed4245",
           };
+
       if (data) {
+        console.log(data)
           if (data.discord_status in colors) {
               setCurrentTrack(colors[data.discord_status])
               }
@@ -50,10 +52,11 @@ function Socials() {
       <div className='px-2 mt-5'>
         <div className='flex justify-between items-center'>
           {data ? (
-        <div className='w-5 h-5 flex gap-0 items-center relative'>
-          <div className="h-[18px] w-[18px] rounded-full flex-shrink-0 group" style={{backgroundColor: style.backgroundColor}}>
+        <div className='flex gap-0 items-center relative'>
+          <div className="h-[18px] w-[18px] rounded-full flex-shrink-0 group" style={{backgroundColor: style.backgroundColor}}></div>
+          <div>
+            <p className='pl-2 inline'>{data.discord_status}</p>
           </div>
-          <p className='pl-2 h-'>{data.discord_status}</p>  
         </div>) :  <StatusFallback />}
 
             <div className="flex gap-3 justify-center sm:justify-end">
