@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --pgwidth: 700px;
+  --pgwidth: 800px;
   --songwidth : calc(-49vw + (var(--pgwidth)*0.5))
 }
 
@@ -47,7 +47,7 @@ html {
   }
 
 .instict {
-  font-size: clamp(75px, 17vw, 110px); 
+  font-size: clamp(80px, 25vw, 150px); 
   font-family: 'Outfit', sans-serif;
 }
 

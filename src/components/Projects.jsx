@@ -28,8 +28,8 @@ function Projects() {
             <hr className="w-full my-4 bg-gray-600 border-none h-[1px]"></hr>
             <h1 className="text-3xl pb-1 font-['Outfit',sans-serif;] text-center">Projects</h1>
             <p className='text-center'>random timepass projects</p>
-            <div className="pt-2">
-                <div className="rounded-lg bg-[#34343433] dark:bg-[#b1b1b175] backdrop-blur-sm mb-2 w-full  p-3.5 flex justify-between">
+            <div className="pt-2 grid sm:grid-cols-2 gap-2 grid-cols-1">
+                <div className="rounded-lg bg-[#44444444] dark:bg-[#b1b1b175] backdrop-blur-sm w-full p-3 sm:p-3.5 flex justify-between">
                     <div className='flex flex-col justify-between w-full' href='https://discord.com/oauth2/authorize?client_id=952146365364977674&permissions=414464658496&scope=bot%20applications.commands'>
                         <div className='flex w-full justify-between'>
                             <div className='flex items-center gap-2 mb-1'>
@@ -42,14 +42,14 @@ function Projects() {
                             
                         </div>
                         <div>
-                            <p className="text-xl my-0.5">OPPA</p>
+                            <p className="text-xl">OPPA</p>
                             <p className='text-sm pb-0.5'>A Discord bot for fetching kdrama online made using <a href='https://discordjs.dev/'  target="_blank" rel="noreferrer">Discord.js</a></p>
                             <p className='text-sm'>Node · Djs</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="rounded-lg bg-[#34343433] dark:bg-[#b1b1b175] backdrop-blur-sm mb-2 w-full p-3.5 flex justify-between">
+                <div className="rounded-lg bg-[#44444444] dark:bg-[#b1b1b175] backdrop-blur-sm w-full p-3 sm:p-3.5 flex justify-between">
                     <div className='flex flex-col justify-between w-full' >
                         <div className='flex w-full justify-between'>
                             <div className='flex items-center gap-2 mb-1'>
@@ -62,14 +62,14 @@ function Projects() {
                             
                         </div>
                         <div>
-                            <p className="text-xl my-0.5">Nasa api explorer</p>
+                            <p className="text-xl">Nasa api explorer</p>
                             <p className='text-sm pb-0.5'>A Nasa api explorer made in react using the <a href='https://api.nasa.gov/'  target="_blank" rel="noreferrer">Nasa Api.</a></p>
                             <p className='text-sm'>React · Last updated on {nasaRepoUpdated}</p>
                         </div>  
                     </div>
                 </div>
                 
-                <div className="rounded-lg bg-[#34343433] dark:bg-[#b1b1b175] backdrop-blur-sm mb-2 w-full  p-3.5 flex justify-between">
+                <div className="rounded-lg bg-[#44444444] dark:bg-[#b1b1b175] backdrop-blur-sm w-full p-3 sm:p-3.5 flex justify-between">
                     <div className='flex flex-col justify-between w-full' >
                         <div className='flex w-full justify-between'>
                             <div className='flex items-center gap-2 mb-1'>
@@ -81,7 +81,7 @@ function Projects() {
                             </a>
                         </div>
                         <div>
-                            <p className="text-xl my-0.5">My Website</p>
+                            <p className="text-xl">My Website</p>
                             <p className='text-sm pb-0.5'>This website I made.</p>
                             <p className='text-sm'>React · Last updated on {webRepoUpdated}</p>
                         </div>

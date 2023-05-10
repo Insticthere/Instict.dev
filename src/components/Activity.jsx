@@ -52,11 +52,11 @@ function Activity(props) {
             <>
             <p className="pb-2">Currently Playing</p>
             <div className="flex">
-              <div className="text-center mr-4">
+              <div className="text-center mr-4 shrink-0">
                 <img
                   src={currentTrack.image}
                   alt="album cover"
-                  className="rounded-md max-w-[100px] w-[100%] h-auto min-w-[50px]"
+                  className="rounded-md max-w-[100px] w-[100%] h-auto min-w-[100  px]"
                   rel="preload"
                 />
               </div>
@@ -98,7 +98,7 @@ function Activity(props) {
               </>
               : <>
               <a className="font-medium text-lg group gap-2 w-fit flex" href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer">
-                <img src='/icons/spotify.png' className='h-8 w-8'></img>
+                <img src='/icons/spotify.png' className='h-7 w-7'></img>
                     <p className="spotifytext group-hover:underline">Not listening to anything</p>
               </a>
               </>
