@@ -6,7 +6,7 @@
 :root {
   --pgwidth: 880px;
   --songwidth : calc(-49vw + (var(--pgwidth)*0.5));
-  --bgcolor: #030711;
+  --bgcolor: rgb(15, 15, 15);
 }
 
 html, body {
