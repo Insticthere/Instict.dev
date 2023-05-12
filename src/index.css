@@ -98,14 +98,14 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 90%;
   -webkit-mask-image: linear-gradient(0deg,transparent,black);
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(148 163 184 / 0.05)'><path d='M0 .5H31.5V32'/></svg>");
-  z-index: 1;
+  z-index: -10;
 }
 
 .dark .App {
   -webkit-mask-image: linear-gradient(0deg,transparent,black);
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(0 0 0 / 0.1)'><path d='M0 .5H31.5V32'/></svg>");
- 
+  z-index: -10;
 }
