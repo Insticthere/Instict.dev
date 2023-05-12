@@ -1,8 +1,24 @@
 import { useLanyardWS } from 'use-lanyard';
 import { useState, useEffect } from 'react';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+import 'dayjs/locale/en';
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault('Asia/Kolkata'); 
 
 function Top() {
   const [currentTrack, setCurrentTrack] = useState(null);  
+  const [indianTime, setIndianTime] = useState(dayjs().tz('Asia/Kolkata'));
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndianTime(dayjs().tz('Asia/Kolkata'));
+    }, 500);
+    return () => clearInterval(intervalId); // Clear the interval on unmount
+  }, []);
   const data = useLanyardWS("522317353917087745")
 
   useEffect(() => {
@@ -30,18 +46,18 @@ function Top() {
   }
     
   return (
-    <div  className="flex justify-between content-center flex-row gap-7 mt-[17%] mx-auto mt-10px">
-      <div className="sm:flex items-center justify-between w-full flex-row-reverse">
-      <img src="/avatar.jpg" className="rounded-xl w-[clamp(190px,24vw,300px)] shrink-0"></img>
-        <div className="pt-7">
-          <p className="mr-[10px] text-[7rem] m-0 instict leading-none font-[750]">Instict.</p>
+    <div className="flex justify-between content-center flex-row gap-7 mt-[10%] sm:mt-[15%] mx-auto mt-10px">
+      <div className="md:flex items-center justify-between w-full flex-row-reverse z-10">
+      <img src="/avatar.jpg" className="rounded-xl w-[clamp(175px,25vw,250px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-black opacity-100 "></img>
+        <div>
+          <p className="m-0 leading-none font-[750] text-[clamp(90px,25vw,160px);] font-['Outfit',sans-serif;]">Instict.</p>
           {data ? (
-        <div className='flex gap-0 items-center relative'>
-          <div className="h-[18px] w-[18px] rounded-full flex-shrink-0 group" style={{backgroundColor: style.backgroundColor}}></div>
-          <div>
-            <p className='pl-2 inline'>{data.discord_status}{data.kv.instict ? ` · ${data.kv.instict}` : ""}</p>
-          </div>
-        </div>) :  <StatusFallback />}
+          <div className='flex gap-0 items-center relative ml-1 sm:ml-2'>
+            <div className="sm:h-[18px] sm:w-[18px] h-[16px] w-[16px] rounded-full flex-shrink-0 group" style={{backgroundColor: style.backgroundColor}}></div>
+            <div>
+              <p className='pl-2 inline sm:text-base text-sm'>{data.discord_status} · {indianTime.format('MMM DD, hh:mm:ss A')}</p>
+            </div>
+          </div>) :  <StatusFallback />}
         </div>
       </div>
     </div>
@@ -52,9 +68,9 @@ export default Top;
 
 function StatusFallback( ) {
   return(
-    <div className='w-5 h-5 flex gap-0 items-center relative animate-pulse'>
+    <div className='w-5 h-5 flex gap-0 items-center relative animate-pulse ml-2'>
       <div className="h-[18px] w-[18px] rounded-full flex-shrink-0 bg-gradient-to-r from-[#151515] to-[#1E1E1E]"></div>
-      <div className="h-[14px] w-[80px] rounded-full flex-shrink-0 bg-gradient-to-r from-[#151515] to-[#1E1E1E] mx-2"></div>
+      <div className="h-[14px] w-[180px] rounded-full flex-shrink-0 bg-gradient-to-r from-[#151515] to-[#1E1E1E] mx-2"></div>
     </div>
   )
 }

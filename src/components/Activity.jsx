@@ -46,6 +46,7 @@ function Activity(props) {
 
     return (
       <div className="px-2">
+        <hr className="w-full my-4 bg-gray-600 border-none h-[1px]"></hr>
         <div>
           {currentTrack ? (
             (props.visible === "true") ? 
@@ -56,7 +57,7 @@ function Activity(props) {
                 <img
                   src={currentTrack.image}
                   alt="album cover"
-                  className="rounded-md max-w-[100px] w-[100%] h-auto min-w-[100  px]"
+                  className="rounded-md max-w-[100px] w-[100%] h-auto min-w-[100px]"
                   rel="preload"
                 />
               </div>
@@ -72,12 +73,12 @@ function Activity(props) {
             <hr className="w-full my-4 bg-gray-600 border-none h-[1px]"></hr>
             </>
             : (
-              <div className="flex">
+              <div className="flex my-[3%]">
               <div className="text-center mr-4">
                 <img
                   src={currentTrack.image}
                   alt="album cover"
-                  className="rounded-md max-w-[100px] w-[100%] h-auto min-w-[50px]"
+                  className="rounded-md max-w-[125px] h-auto w-auto min-w-[100px] flex-shrink-0"
                   rel="preload"
                 />
               </div>
@@ -85,7 +86,7 @@ function Activity(props) {
                 <h3 className="text-[25px]">Spotify</h3>
                 <a
                   className="font-medium text-lg hover:underline block w-fit" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
-                  <p className="spotifytext">{currentTrack.name}</p>
+                  <p className="spotifytext overflow-hidden">{currentTrack.name}</p>
                 </a>
                 <p className="text-gray-400 text-[15px] dark:text-[#4e4e4e]">{currentTrack.artist}</p>
               </div>
@@ -94,10 +95,9 @@ function Activity(props) {
           ) : 
             (props.visible === "true") ?
               <>
-              <hr className="w-full mt-4 bg-slate-800 border-none h-0.5"></hr>
               </>
               : <>
-              <a className="font-medium text-lg group gap-2 w-fit flex" href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer">
+              <a className="font-medium text-lg group gap-2 w-fit flex my-[2%]" href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer">
                 <img src='/icons/spotify.png' className='h-7 w-7'></img>
                     <p className="spotifytext group-hover:underline">Not listening to anything</p>
               </a>

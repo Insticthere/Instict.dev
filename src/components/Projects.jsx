@@ -24,7 +24,7 @@ function Projects() {
           .catch(error => console.error(error));
         }, []);
     return(
-        <div className="mx-2 pb-2">
+        <div>
             <hr className="w-full my-4 bg-gray-600 border-none h-[1px]"></hr>
             <h1 className="text-3xl pb-1 font-['Outfit',sans-serif;] text-center">Projects</h1>
             <p className='text-center'>random timepass projects</p>
