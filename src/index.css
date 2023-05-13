@@ -90,16 +90,101 @@ html {
 }
 
 .App {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
+  --stripe-opacity: 0.09; /* set the initial opacity value */
+
+  background: transparent;
+  background-color: #04030c;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(255, 255, 255, var(--stripe-opacity)) 10%,
+      rgba(255, 255, 255, var(--stripe-opacity)) 10%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, var(--stripe-opacity)) 10%,
+      rgba(255, 255, 255, var(--stripe-opacity)) 10%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      45deg,
+      transparent 24%,
+      rgba(255, 255, 255, var(--stripe-opacity)) 10%,
+      rgba(255, 255, 255, var(--stripe-opacity)) 10%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, var(--stripe-opacity)) 10%,
+      rgba(255, 255, 255, var(--stripe-opacity)) 10%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 70px 70px;
+}
+/*#070514, #04030c, #0d1117*/
+
+.hovered {
+  animation-name: loop-background-hover;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.unhovered {
+  animation-name: loop-background;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loop-background-hover {
+  0% {
+    background-size: 50px 50px;
+  }
+
+  100% {
+    background-size: 25px 25px;
+  }
+}
+
+@keyframes loop-background {
+  0% {
+    background-size: 25px 25px;
+  }
+  100% {
+    background-size: 50px 50px;
+  }
 }
 
 .dark .App {
-  -webkit-mask-image: linear-gradient(0deg,transparent,black);
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(0 0 0 / 0.15)'><path d='M0 .5H31.5V32'/></svg>");
-  z-index: -10;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0.5) 10%,
+      transparent 27%,
+      transparent 74%,
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0.5) 10%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      45deg,
+      transparent 24%,
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0.5) 10%,
+      transparent 27%,
+      transparent 74%,
+      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, 0.5) 10%,
+      transparent 77%,
+      transparent
+    );
+}
+
+#root {
+  width: 100%;
 }
