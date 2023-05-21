@@ -69,7 +69,7 @@ function Home() {
           <Top />
           <Socials />
         </div>
-        <div className="mt-3 pb-[5%]">
+        <div className="mt-3">
             <Activity visible="false"/>
             <Projects />
         </div>

@@ -8,8 +8,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App unhovered parallax dark:text-black dark:bg-white w-full pb-9 text-white absolute z-10 transition-colors">
-        <div className="App"></div>
+      <div className="dark:text-black dark:bg-white w-full text-white dark:font-semibold z-10 h-full App unhovered parallax">
         <Navbar />
         <div className="mx-auto max-w-[var(--pgwidth)] w-[90%] transition">
           <Routes>
