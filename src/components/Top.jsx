@@ -51,7 +51,7 @@ function Top() {
           className="rounded-xl w-[clamp(175px,25vw,250px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-black opacity-100 "
         ></img>
           <div>
-            <p className="m-0 leading-none font-[750] text-[clamp(70px,25vw,160px);] font-['Outfit',sans-serif;]">
+            <p className="m-0 leading-none font-[750] text-[clamp(70px,20vw,150px);] font-['Outfit',sans-serif;]">
               Instict.
             </p>
 
@@ -73,7 +73,7 @@ function Top() {
             )}
 
             <div>
-              <p className="px-2 sm:text-lg text-md pt-1.5 max-sm:py-1.5">Hi, i make or break things depending on my mood mainly with js for now.</p>
+              <p className="px-2 text-lg leading-tight pt-1.5 max-sm:py-1.5">Text holder for now lol will add a chatgpt made about later.</p>
             </div>
 
             

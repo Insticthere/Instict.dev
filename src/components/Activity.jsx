@@ -68,7 +68,7 @@ function Activity() {
               <div className="flex flex-col justify-between gap-0.5">
                 <a
                   className="font-medium hover:underline block w-fit" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
-                  <p className="text-[22px] leading-none my-auto  min-w-[50px]">{currentTrack.name}</p>
+                  <p className="text-[20px] leading-tight my-auto  min-w-[50px]">{currentTrack.name}</p>
                 </a>
                 <p className="text-gray-400 text-lg dark:text-[#4e4e4e]">{currentTrack.artist}</p>
                 <div className="text-gray-400 dark:text-[#4e4e4e] flex items-center max-w-[300px]">
