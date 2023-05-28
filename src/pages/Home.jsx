@@ -37,8 +37,7 @@ function Home() {
     let _mouseX = event.clientX;
     let _mouseY = event.clientY;
     let _depth1 = `${50 - (_mouseX - _w) * 0.005}% ${50 - (_mouseY - _h) * 0.03}%`;
-    
-      _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.06}%`;
+  
     
     let x = _depth1;
     elem.style.backgroundPosition = x;

@@ -4,9 +4,11 @@
 @tailwind utilities;
 
 :root {
-  --pgwidth: 900px;
+  --pgwidth: 880px;
   --songwidth : calc(-49vw + (var(--pgwidth)*0.5));
-  --bgcolor: #111111
+  --bgcolor: #111111;
+  --stripe-opacity: 0.06;
+  --stripe-opacity-dark: 0.2;
 }
 
 body, html {
@@ -68,7 +70,6 @@ body, html {
 }
 
 .App {
-  --stripe-opacity: 0.09; /* set the initial opacity value */
   background: transparent;
   background-color: #04030c;
   color: white;
@@ -140,24 +141,24 @@ body, html {
   background-image: linear-gradient(
       0deg,
       transparent 24%,
-      rgba(0, 0, 0, 0.5) 10%,
-      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, var(--stripe-opacity-dark)) 10%,
+      rgba(0, 0, 0, var(--stripe-opacity)) 10%,
       transparent 27%,
       transparent 74%,
-      rgba(0, 0, 0, 0.5) 10%,
-      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, var(--stripe-opacity-dark)) 10%,
+      rgba(0, 0, 0, var(--stripe-opacity-dark)) 10%,
       transparent 77%,
       transparent
     ),
     linear-gradient(
       45deg,
       transparent 24%,
-      rgba(0, 0, 0, 0.5) 10%,
-      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, var(--stripe-opacity-dark)) 10%,
+      rgba(0, 0, 0, var(--stripe-opacity-dark)) 10%,
       transparent 27%,
       transparent 74%,
-      rgba(0, 0, 0, 0.5) 10%,
-      rgba(0, 0, 0, 0.5) 10%,
+      rgba(0, 0, 0, var(--stripe-opacity-dark)) 10%,
+      rgba(0, 0, 0, var(--stripe-opacity-dark)) 10%,
       transparent 77%,
       transparent
     );

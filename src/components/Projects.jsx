@@ -1,6 +1,6 @@
 function Projects() {
     return(
-        <div className="px-2">
+        <div className="px-2 pb-6">
             <h1 className="text-3xl font-['Outfit',sans-serif;] py-2 pl-0.5">Projects</h1>
             <div className="pt-2 grid sm:grid-cols-2 gap-2 grid-cols-1">
 

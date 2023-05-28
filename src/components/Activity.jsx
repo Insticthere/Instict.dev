@@ -73,7 +73,7 @@ function Activity() {
                 <p className="text-gray-400 text-lg dark:text-[#4e4e4e]">{currentTrack.artist}</p>
                 <div className="text-gray-400 dark:text-[#4e4e4e] flex items-center max-w-[300px]">
                   <img src='/icons/spotify.png' className='h-5 w-5 mr-1.5'></img>
-                  <p className="text-ellipsis overflow-hidden whitespace-nowrap text-base"><span className="underline">{currentTrack.title}</span> on <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" className="hover:underline">Spotify</a></p>
+                  <p className="whitespace-nowrap text-base"><span className="underline">{currentTrack.title}</span> on <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" className="hover:underline">Spotify</a></p>
                 </div>
               </div>
             </div> 

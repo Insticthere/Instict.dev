@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar";
 import Home from "./Home";
 import Songs from "./Songs";
-import Footer from "../components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -16,9 +15,9 @@ function App() {
             <Route path="/songs" element={<Songs />} />
           </Routes>
         </div>
+        
       </div>
-      <Footer />
-    </BrowserRouter>
+      </BrowserRouter>
   );
 }
 
