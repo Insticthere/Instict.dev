@@ -1,24 +1,9 @@
 import { useLanyardWS } from "use-lanyard";
 import { useState, useEffect } from "react";
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import timezone from "dayjs/plugin/timezone";
-import "dayjs/locale/en";
-
-dayjs.extend(utc);
-dayjs.extend(timezone);
-dayjs.tz.setDefault("Asia/Kolkata");
 
 function Top() {
   const [currentTrack, setCurrentTrack] = useState(null);
-  const [indianTime, setIndianTime] = useState(dayjs().tz("Asia/Kolkata"));
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIndianTime(dayjs().tz("Asia/Kolkata"));
-    }, 500);
-    return () => clearInterval(intervalId); // Clear the interval on unmount
-  }, []);
   const data = useLanyardWS("522317353917087745");
 
   useEffect(() => {
@@ -44,7 +29,7 @@ function Top() {
   };
 
   return (
-    <div className="flex justify-between content-center flex-row gap-7 mt-[10%] sm:mt-[13%] mx-auto mt-10px px-2">
+    <div className="flex justify-between content-center flex-row gap-7 sm:mt-[15%] mx-auto mt-10px">
       <div className="md:flex items-center justify-between w-full flex-row-reverse z-10">
         <img
           src="/avatar.jpg"
@@ -64,25 +49,18 @@ function Top() {
                   ></div>
                   <div>
                     <p className="pl-2 inline sm:text-base text-sm text-[#9eaab7] dark:text-[#4e4e4e]">
-                      {data.discord_status} ·{" "}
-                      {indianTime.format("MMM DD, hh:mm:ss A")}
+                      {data.discord_status} 
+                      
+                      {data.kv.instict ? <span className="text-base leading-4 text-white dark:text-black"> ·{" "}{data.kv.instict}</span> : ""}
+
                     </p>
                   </div>
                 </div>
-                {data.kv.instict ? 
-            <div>
-                <p className="px-2 text-lg leading-tight pt-1.5 max-sm:py-1.5">{data.kv.instict}</p>
-            </div> : ""}
-
               </div>
             ) : (
-              <StatusFallback />
+              <StatusFallback />                      
             )}
 
-
-
-
-            
           </div>
 
       </div>

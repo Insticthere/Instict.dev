@@ -13,6 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Songs />} />
+            <Route path="/discord" element="lol.com"/>
           </Routes>
         </div>
         
