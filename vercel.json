@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {"source": "/discord", "destination": "https://discordapp.com/users/522317353917087745/"},
-      {"source": "/github", "destination": "https://github.com/Insticthere", "permanent": true},
+      {"source": "/github", "destination": "https://github.com/Insticthere", "status": 301},
     {"source": "/(.*)", "destination": "/"}
   ]
 }
