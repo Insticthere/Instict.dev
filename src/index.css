@@ -99,7 +99,7 @@ body, html {
       transparent 77%,
       transparent
     );
-  background-size: 70px 70px;
+  background-size: 50px 50px;
 }
 
 /*#070514, #04030c, #0d1117*/
@@ -124,13 +124,13 @@ body, html {
   }
 
   100% {
-    background-size: 25px 25px;
+    background-size: 35px 35px;
   }
 }
 
 @keyframes loop-background {
   0% {
-    background-size: 25px 25px;
+    background-size: 35px 35px;
   }
   100% {
     background-size: 50px 50px;

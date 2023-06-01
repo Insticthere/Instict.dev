@@ -16,7 +16,7 @@ function Navbar() {
 
   return (
     
-  <div className="sticky z-20 backdrop-blur-md sm:rounded-md w-full max-w-[calc(var(--pgwidth)+10px)] m-auto drop-shadow top-0 sm:top-[15px] py-1 px-2">
+  <div className="sticky z-20 backdrop-blur-md sm:rounded-md w-full max-w-[calc(var(--pgwidth))] m-auto drop-shadow top-0 sm:top-[15px] py-1 px-3">
     <header className="flex justify-between text-[20px] top-0 z-10 relative items-center sm:rounded-md">
       <div className="flex gap-3 pl-1">
         <a className="text-sm sm:text-base" href="/">Home</a>

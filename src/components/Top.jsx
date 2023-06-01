@@ -80,6 +80,7 @@ function Top() {
             )}
         </div>
       </div>
+      
     </div>
   );
 }
@@ -88,9 +89,11 @@ export default Top;
 
 function StatusFallback() {
   return (
+    <>
     <div className="w-5 h-5 flex gap-0 items-center relative animate-pulse ml-2">
       <div className="h-[18px] w-[18px] rounded-full flex-shrink-0 bg-gradient-to-r from-[#151515] to-[#1E1E1E]"></div>
       <div className="h-[14px] w-[180px] rounded-full flex-shrink-0 bg-gradient-to-r from-[#151515] to-[#1E1E1E] mx-2"></div>
-    </div>
+    </div>   
+    </>
   );
 }

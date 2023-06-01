@@ -25,6 +25,7 @@ function Home() {
   };
 
   useEffect(() => {
+    if (window.innerWidth < 500) return;
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   });
@@ -44,6 +45,7 @@ function Home() {
   }}
 
   useEffect(() => {
+    if (window.innerWidth < 500) return;
     window.addEventListener("mousemove", handleMouseMove1);
     return () => window.removeEventListener("mousemove", handleMouseMove1);
   });

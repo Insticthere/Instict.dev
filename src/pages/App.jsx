@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <div className="dark:text-black dark:bg-white w-full text-white dark:font-semibold z-10 h-full App unhovered parallax min-h-screen">
         <Navbar />
-        <div className="mx-auto max-w-[var(--pgwidth)] w-[90%] transition">
+        <div className="mx-auto max-w-[var(--pgwidth)] w-[95%] transition">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Songs />} />

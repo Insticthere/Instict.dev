@@ -53,7 +53,7 @@ function Activity() {
     return (
       <div>
         <hr className="w-full bg-gray-600 border-none h-[1px] mt-3"></hr>
-        <div className="py-4 px-1.5">
+        <div className="py-2 sm:py-4 px-1.5">
           {currentTrack ? (
             <div className="pl-1">
             <div className="flex items-center">
@@ -70,10 +70,10 @@ function Activity() {
                   className="font-medium hover:underline block w-fit" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
                   <p className="text-[20px] leading-tight my-auto  min-w-[50px]">{currentTrack.name}</p>
                 </a>
-                <p className="text-gray-400 text-lg dark:text-[#4e4e4e]">{currentTrack.artist}</p>
+                <p className="text-gray-400 text-[15px] sm:text-lg dark:text-[#4e4e4e]">{currentTrack.artist}</p>
                 <div className="text-gray-400 dark:text-[#4e4e4e] flex items-center max-w-[300px]">
-                  <img src='/icons/spotify.png' className='h-5 w-5 mr-1.5'></img>
-                  <p className="whitespace-nowrap text-base"><span className="underline">{currentTrack.title}</span> on <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" className="hover:underline">Spotify</a></p>
+                  <img src='/icons/spotify.png' className='w-[18px] aspect-square sm:w-5 mr-1.5'></img>
+                  <p className="text-[0.85rem] whitespace-nowrap sm:text-base"><span className="underline">{currentTrack.title}</span> on <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" className="hover:underline">Spotify</a></p>
                 </div>
               </div>
             </div> 
