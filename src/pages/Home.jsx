@@ -11,6 +11,7 @@ function Home() {
   const handleHover = (
     
   ) => {
+    if (window.innerWidth < 500) return;
     document.getElementsByClassName("App")[0].classList.remove("unhovered");
     document.getElementsByClassName("App")[0].classList.add("hovered");
     setIsHovered(true);
@@ -19,6 +20,7 @@ function Home() {
   const handleMouseLeave = (
     
   ) => {
+    if (window.innerWidth < 500) return;
     document.getElementsByClassName("App")[0].classList.remove("hovered");
     document.getElementsByClassName("App")[0].classList.add("unhovered");
     setIsHovered(false);

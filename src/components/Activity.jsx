@@ -53,7 +53,7 @@ function Activity() {
     return (
       <div>
         <hr className="w-full bg-gray-600 border-none h-[1px] mt-3"></hr>
-        <div className="py-2 sm:py-3 px-1.5">
+        <div className="py-3 sm:py-3 px-1.5">
           {currentTrack ? (
             <div className="pl-1">
             <div className="flex items-center">
@@ -68,7 +68,7 @@ function Activity() {
               <div className="flex flex-col justify-between gap-0.5">
                 <a
                   className="font-medium hover:underline block w-fit" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
-                  <p className="text-[20px] leading-tight my-auto  min-w-[50px]">{currentTrack.name}</p>
+                  <p className="text-[24px] leading-tight my-auto min-w-[50px]">{currentTrack.name}</p>
                 </a>
                 <p className="text-gray-400 text-lg dark:text-[#363738]">{currentTrack.artist}</p>
                 <div className="text-gray-400 dark:text-[#363738] flex items-center max-w-[300px]">

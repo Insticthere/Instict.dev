@@ -6,7 +6,7 @@ function Projects() {
       </h1>
       <div className="pt-1 grid sm:grid-cols-2 gap-y-2.5 gap-x-2  grid-cols-1">
         <a
-          className="rounded-lg bg-[#151517db] dark:bg-[#d6d6d6b3] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#9e9d9d21] dark:border-[#a0a0a0] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
+          className="rounded-lg bg-[#202020d5] dark:bg-[#d6d6d6b3] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#9e9d9d21] dark:border-[#a0a0a0] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
           href="https://discord.com/oauth2/authorize?client_id=952146365364977674&permissions=414464658496&scope=bot%20applications.commands"
           target="_blank"
           rel="noopener noreferrer"
@@ -33,7 +33,7 @@ function Projects() {
         </a>
 
         <a
-          className="rounded-lg bg-[#151517db] dark:bg-[#d6d6d6b3] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#9e9d9d21] dark:border-[#a0a0a0] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
+          className="rounded-lg bg-[#202020d5] dark:bg-[#d6d6d6b3] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#9e9d9d21] dark:border-[#a0a0a0] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
           href="https://nasa-api-explorer-xi.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
@@ -61,7 +61,7 @@ function Projects() {
         </a>
 
         <a
-          className="rounded-lg bg-[#151517db] dark:bg-[#d6d6d6b3] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#9e9d9d21] dark:border-[#a0a0a0] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
+          className="rounded-lg bg-[#202020d5] dark:bg-[#d6d6d6b3] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#9e9d9d21] dark:border-[#a0a0a0] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
           href="/"
         >
           <div
