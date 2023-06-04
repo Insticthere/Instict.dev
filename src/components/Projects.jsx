@@ -6,7 +6,7 @@ function Projects() {
       </h1>
       <div className="pt-1 grid sm:grid-cols-2 gap-y-2.5 gap-x-2  grid-cols-1">
         <a 
-        className="rounded-lg bg-[#15151ccc] dark:bg-[#b1b1b175] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#6161612b] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
+        className="rounded-lg bg-[#15151cc4] dark:bg-[#b1b1b175] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#6161612b] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
         href="https://discord.com/oauth2/authorize?client_id=952146365364977674&permissions=414464658496&scope=bot%20applications.commands"
                   target="_blank"
                   rel="noopener noreferrer">
@@ -38,7 +38,7 @@ function Projects() {
         </a>
 
         <a 
-            className="rounded-lg bg-[#15151ccc] dark:bg-[#b1b1b175] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#6161612b] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
+            className="rounded-lg bg-[#15151cc4] dark:bg-[#b1b1b175] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#6161612b] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
             href="https://nasa-api-explorer-xi.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -70,7 +70,7 @@ function Projects() {
           </div>
         </a>
 
-        <a className="rounded-lg bg-[#15151ccc] dark:bg-[#b1b1b175] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#6161612b] border-solid border-t-[2px] hover:-translate-y-0.5 transition" href="/">
+        <a className="rounded-lg bg-[#15151cc4] dark:bg-[#b1b1b175] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#6161612b] border-solid border-t-[2px] hover:-translate-y-0.5 transition" href="/">
           <div
             className="flex flex-col w-full"
             href="https://discord.com/oauth2/authorize?client_id=952146365364977674&permissions=414464658496&scope=bot%20applications.commands"
