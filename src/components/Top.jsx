@@ -48,7 +48,8 @@ function Top() {
       <div className="md:flex items-center justify-between w-full flex-row-reverse z-10">
         <img
           src="/avatar.jpg"
-          className="rounded-xl w-[clamp(175px,25vw,240px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-black opacity-100 "
+          className="rounded-xl w-[clamp(175px,25vw,240px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-black opacity-100"
+          alt="Avatar"
         ></img>
           <div>
             <p className="m-0 leading-none font-[750] text-[clamp(90px,20vw,140px);] font-['Outfit',sans-serif;]">

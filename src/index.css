@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --pgwidth: 850px;
+  --pgwidth: 925px;
   --songwidth : calc(-49vw + (var(--pgwidth)*0.5));
   --bgcolor: #111111;
   --stripe-opacity: 0.06;
