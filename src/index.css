@@ -131,13 +131,13 @@ body, html {
   }
 
   100% {
-    background-size: 35px 35px;
+    background-size: 40px 40px;
   }
 }
 
 @keyframes loop-background {
   0% {
-    background-size: 35px 35px;
+    background-size: 40px 40px;
   }
   100% {
     background-size: 50px 50px;

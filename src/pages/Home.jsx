@@ -40,7 +40,7 @@ function Home() {
     let _h = window.innerHeight / 2;
     let _mouseX = event.clientX;
     let _mouseY = event.clientY;
-    let _depth1 = `${50 - (_mouseX - _w) * 0.005}% ${50 - (_mouseY - _h) * 0.03}%`;
+    let _depth1 = `${50 - (_mouseX - _w) * 0.005}% ${50 - (_mouseY - _h) * 0.05}%`;
   
     
     let x = _depth1;
@@ -60,11 +60,11 @@ function Home() {
     let _mouseX = event.clientX;
     let _mouseY = event.clientY;
     let _depth1 = `${50 - (_mouseX - _w) * 0.005}% ${
-      50 - (_mouseY - _h) * 0.03
+      50 - (_mouseY - _h) * 0.01
     }%`;
     let x = _depth1;
     elem.style.backgroundPosition = x;
-  }
+  } 
 
 
   return (
