@@ -52,7 +52,7 @@ function Top() {
           alt="Avatar"
         ></img>
           <div>
-            <p className="m-0 leading-none font-[750] text-[clamp(90px,20vw,140px);] font-['Outfit',sans-serif;]">
+            <p className="m-0 leading-[0.95] font-[750] text-[clamp(90px,20vw,140px);] font-['Outfit',sans-serif;]">
               Instict.
             </p>
 
@@ -72,7 +72,7 @@ function Top() {
                 </div>
                 {data.kv.instict ? 
             <div>
-                <p className="px-2 text-lg leading-tight pt-1.5 max-sm:py-1.5">{data.kv.instict}</p>
+                <p className="px-2 text-lg leading-tight pt-0.5 max-sm:py-1.5">{data.kv.instict}</p>
             </div> : ""}
 
               </div>

@@ -52,7 +52,7 @@ function Activity() {
 
     return (
       <div>
-        <hr className="w-full bg-gray-600 border-none h-[1px] mt-3"></hr>
+        <hr className="w-full bg-[#f0f8ff2b] border-none h-[1px] mt-3"></hr>
         <div className="py-3 sm:py-3 px-1.5">
           {currentTrack ? (
             <div className="pl-1">
@@ -86,7 +86,7 @@ function Activity() {
               </>
           }
         </div>
-        <hr className="w-full bg-gray-600 border-none h-[1px]"></hr>
+        <hr className="w-full bg-[#f0f8ff2b] border-none h-[1px]"></hr>
       </div>
     );
 }

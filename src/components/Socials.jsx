@@ -1,7 +1,7 @@
 function Socials() {
    
   return (
-    <div className='px-2 sm:my-3 my-2'>
+    <div className='px-2 sm:my-3  my-2'>
       <div className='flex justify-between items-center'>
       <div></div>
       <div className="flex gap-3 items-end">
