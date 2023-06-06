@@ -3,6 +3,7 @@ import Activity from "../components/Activity"
 import Socials from "../components/Socials"
 import Projects from "../components/Projects";
 import { useState, useEffect } from "react";
+import Things from "../components/Things";
 
 
 function Home() {
@@ -75,6 +76,7 @@ function Home() {
         <div className="mt-3">
             <Activity visible="false"/>
             <Projects />
+            <Things />
         </div>
       </>
   );

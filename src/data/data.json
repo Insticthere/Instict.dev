@@ -25,5 +25,65 @@
         "tools": "Node · React",
         "newpage" : false 
     }
+  ],
+  "Development": [
+    {
+      "name": "JavaScript",
+      "Image": "/Technology/js.svg"
+    },
+
+    {
+      "name": "Node.js",
+      "Image": "/Technology/nodejs.svg"
+    },
+
+    {
+      "name": "React",
+      "Image": "/Technology/react.svg"
+    },
+
+    {
+      "name": "Tailwindcss",
+      "Image": "/Technology/tailwind.svg"
+    },
+
+    {
+      "name": "Discord.js",
+      "Image": "/Technology/djs.svg"
+    },
+
+    {
+      "name": "HTML",
+      "Image": "/Technology/html.svg"
+    },
+
+    {
+      "name": "CSS",
+      "Image": "/Technology/css.svg"
+    }
+  ],
+  "Apps": [
+    {
+      "name": "VSCode",
+      "Image": "/Apps/vscode.svg"
+    },
+
+    {
+      "name": "Github",
+      "Image": "/icons/github.png",
+      "dark" : true
+    },
+
+    {
+      "name": "Hyper",
+      "Image": "/Apps/hyper.avif"
+    },
+
+
+    {
+      "name": "Vercel",
+      "Image": "/services/vercel.svg",
+      "dark" : true
+    }
   ]
 }

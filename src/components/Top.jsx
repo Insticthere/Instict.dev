@@ -48,7 +48,7 @@ function Top() {
   };
 
   return (
-    <div className="flex justify-between content-center flex-row gap-7 mt-[20px] sm:mt-[13%] mx-auto mt-10px px-2">
+    <div className="flex justify-between content-center flex-row gap-7 mt-[20px] sm:mt-[12%] mx-auto px-2">
       <div className="md:flex items-center justify-between w-full flex-row-reverse z-10">
         <img
           src="/avatar.jpg"
