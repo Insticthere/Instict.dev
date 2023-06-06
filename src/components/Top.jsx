@@ -1,5 +1,8 @@
 import { useLanyardWS } from "use-lanyard";
 import { useState, useEffect } from "react";
+
+import info from "../data/data.json"
+
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
@@ -7,19 +10,20 @@ import "dayjs/locale/en";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-dayjs.tz.setDefault("Asia/Kolkata");
+dayjs.tz.setDefault(info.timezn);
 
 function Top() {
   const [currentTrack, setCurrentTrack] = useState(null);
-  const [indianTime, setIndianTime] = useState(dayjs().tz("Asia/Kolkata"));
+  const [indianTime, setIndianTime] = useState(dayjs().tz(info.timezn));
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setIndianTime(dayjs().tz("Asia/Kolkata"));
+      setIndianTime(dayjs().tz(info.timezn));
     }, 500);
     return () => clearInterval(intervalId); // Clear the interval on unmount
   }, []);
-  const data = useLanyardWS("522317353917087745");
+
+  const data = useLanyardWS(info.discordid);
 
   useEffect(() => {
     let colors = {
@@ -53,7 +57,7 @@ function Top() {
         ></img>
           <div>
             <p className="m-0 leading-[0.95] font-[750] text-[clamp(90px,20vw,140px);] font-['Outfit',sans-serif;]">
-              Instict.
+              {info.Name}
             </p>
 
             {data ? (

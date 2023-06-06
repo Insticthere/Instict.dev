@@ -1,0 +1,26 @@
+{
+  "Name" : "Instict",
+  "discordid": "522317353917087745",
+  "timezone" :"Asia/Kolkata",
+  "projects": [
+    {
+      "name": "OPPA",
+      "link": "/oppa",
+      "description": "A Discord bot for fetching kdrama and actors online.",
+      "tools": "Node · Djs"
+    },
+
+    { 
+        "name": "Nasa-api-explorer", 
+        "link": "/nasa", 
+        "description": "A Nasa api explorer.", 
+        "tools": "Node · React" 
+    },
+    { 
+        "name": "My Website", 
+        "link": "/", 
+        "description": "This website I made.", 
+        "tools": "Node · React" 
+    }
+  ]
+}

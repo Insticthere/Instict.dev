@@ -30,7 +30,7 @@ function Toptracks(props) {
           </div>
           <div className=" md:w-[98vw] ml-[var(--songwidth)] max-md:mx-auto">
               <div className="grid grid-flow-col grid-rows-2 overflow-x-auto gap-2 scrollbar-hide">
-                {Toptracks ?  Toptracks.items?.map((element, key) => (
+                {Toptracks ?  Toptracks.items.map((element, key) => (
                   <a href={element.external_urls.spotify} key={key}>
                     <div className="group col-span-1 row-span-1 snap-start relative overflow-hidden rounded-md ">
                     <Suspense fallback={<div className=" max-w-none w-[200px] h-[200px] rounded scroll scrollbar-hide bg-[#151515]"></div>}> 
