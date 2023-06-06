@@ -7,20 +7,23 @@
       "name": "OPPA",
       "link": "/oppa",
       "description": "A Discord bot for fetching kdrama and actors online.",
-      "tools": "Node · Djs"
+      "tools": "Node · Djs",
+      "newpage" : false 
     },
 
     { 
         "name": "Nasa-api-explorer", 
         "link": "/nasa", 
         "description": "A Nasa api explorer.", 
-        "tools": "Node · React" 
+        "tools": "Node · React",
+        "newpage" : false 
     },
     { 
         "name": "My Website", 
         "link": "/", 
         "description": "This website I made.", 
-        "tools": "Node · React" 
+        "tools": "Node · React",
+        "newpage" : false 
     }
   ]
 }

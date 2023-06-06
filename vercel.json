@@ -5,7 +5,7 @@
   "redirects":[
     {"source": "/discord", "destination": "https://discordapp.com/users/522317353917087745/"},  
     {"source": "/github", "destination": "https://github.com/Insticthere"},
-    {"source": "/oppa", "destination": "oppa.instict.dev/invite"},
-    {"source": "/nasa", "destination": "nasa.instict.dev"}
+    {"source": "/oppa", "destination": "https://oppa.instict.dev/invite"},
+    {"source": "/nasa", "destination": "https://nasa.instict.dev"}
   ]
 }

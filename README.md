@@ -7,6 +7,7 @@
 
 ⚡️ Spotify embed to display real time and past songs along with top tracks.\
 ⚡️ Responsive and Customizable.\
+⚡️ Dark and Light mode support.\
 ⚡️ Update description via discord.\
 ⚡️ Real time Discord presence with [Lanyard](https://github.com/Phineas/lanyard/).
 

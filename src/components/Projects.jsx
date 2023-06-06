@@ -12,6 +12,8 @@ function Projects() {
           className="rounded-lg bg-[#202020d5] dark:bg-[#d6d6d6b3] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#9e9d9d21] dark:border-[#a0a0a0] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
           href={element.link}
           key={key}
+          target={element.newpage ? "_blank" : "_self"}  // Use "_blank" for a new page or "_self" for the same page
+          rel={element.newpage ? "noopener noreferrer" : ""}
           >
           <div
             className="flex flex-col w-full"
