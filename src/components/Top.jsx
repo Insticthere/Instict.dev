@@ -76,7 +76,7 @@ function Top() {
                 </div>
                 {data.kv.instict ? 
             <div>
-                <p className="px-2 text-lg leading-tight pt-0.5 max-sm:py-1.5">{data.kv.instict}</p>
+                <p className="px-2 text-lg leading-tight pt-0.5 max-sm:py-1.5">{data.kv.description}</p>
             </div> : ""}
 
               </div>
