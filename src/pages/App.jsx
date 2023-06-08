@@ -2,22 +2,25 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Home from "./Home";
 import Songs from "./Songs";
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Skills from "./Skills";
 
 function App() {
 
   return (
     <BrowserRouter>
-      <div className="dark:text-black dark:bg-white w-full text-white dark:font-bold z-10 h-full App unhovered parallax min-h-screen ">
+      <div className="App unhovered parallax  w-full text-white dark:font-bold z-10 h-full  dark:text-black dark:bg-[#fcfcfc] min-h-screen">
         <Navbar />
-        <div className="mx-auto max-w-[var(--pgwidth)] w-[95%] transition min-[2100px]:w-[65vw] min-[2100px]:max-w-7xl">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/songs" element={<Songs />} />
-          </Routes>
+        <div className="transition flex flex-col item justify-between">
+          <div className="mx-auto max-w-[var(--pgwidth)] w-[95%] min-[2100px]:w-[65vw] min-[2100px]:max-w-7xl">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/songs" element={<Songs />} />
+              <Route path="/skills" element={<Skills />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
       </BrowserRouter>
   );

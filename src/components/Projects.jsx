@@ -9,9 +9,9 @@ function Projects() {
       <div className="pt-1 grid sm:grid-cols-2 gap-y-2.5 gap-x-2  grid-cols-1">
         { data.projects.map((element, key) => (
           <a
-          className="rounded-lg bg-[#202020d5] dark:bg-[#edededb3] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#9e9d9d21] dark:border-[#b5b3b3] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
+          className="rounded-lg bg-[#1b1b1bd5] dark:bg-[#edededb3] backdrop-blur-sm p-3 sm:p-3.5 flex justify-between border-[#9e9d9d21] dark:border-[#b5b3b3] border-solid border-t-[2px] hover:-translate-y-0.5 transition"
           href={element.link}
-          key={key}
+          key={key} 
           target={element.newpage ? "_blank" : "_self"}  // Use "_blank" for a new page or "_self" for the same page
           rel={element.newpage ? "noopener noreferrer" : ""}
           >
