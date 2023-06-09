@@ -23,7 +23,7 @@ function Toptracks(props) {
       }, [props.term]);
     
     return (
-        <div className="mt-8">
+        <div className="mt-5">
           <div className="flex items-baseline overflow-hidden ">
             <h1 className="mt-[10px] mb-[10px] text-xl font-extrabold">Top Tracks</h1>
             <p className="pl-[5px]"> - {props.name}</p>

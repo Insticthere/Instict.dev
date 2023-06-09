@@ -2,7 +2,7 @@ import data from "../data/data.json"
 
 function Things() {
   return (
-    <div className="px-2 pb-6 pt-[7%]">
+    <div className="px-2 pb-6 pt-[5%]">
       <h1 className="text-4xl  font-['Outfit',sans-serif;] py-2 pl-0.5">
         Technology I use
       </h1>

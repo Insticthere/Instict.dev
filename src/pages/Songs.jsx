@@ -3,7 +3,7 @@ import Activity from "../components/Activity";
 
 function Songs() {
   return (
-    <div className="mt-[10%] pb-7">
+    <div className="mt-[7%] pb-7">
       <h1 className="[font-family: 'Inter', sans-serif;] text-5xl">Music</h1>
       <h1 className="mb-7">My top tracks on Spotify</h1>
         <Activity visible="true"/>

@@ -56,7 +56,7 @@ function Top() {
           alt="Avatar"
         ></img>
           <div>
-            <p className="m-0 leading-[0.95] font-[750] text-[clamp(90px,20vw,140px);] font-['Outfit',sans-serif;]">
+            <p className="m-0 leading-[0.95] font-[750] text-[clamp(90px,20vw,150px);] font-['Outfit',sans-serif;]">
               {info.Name}
             </p>
 
