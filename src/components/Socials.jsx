@@ -9,7 +9,7 @@ function Socials() {
           <div className="group">
               <a href="/discord" target="_blank" rel="noopener noreferrer" aria-label="discord">
                 <div className="flex items-center">
-                  <img src='/icons/discord.png' className='h-[26px] w-[26px] hover:scale-[1.1] ease-in-out duration-300 aspect-square'></img>
+                  <img src='/icons/discord.png' className='h-[26px] w-[26px] hover:scale-[1.1] ease-in-out duration-300 aspect-square' alt="discord"></img>
                 </div>
               </a>
             </div>
@@ -17,7 +17,7 @@ function Socials() {
             <div className="group">
               <a href="/github" target="_blank" rel="noopener noreferrer" aria-label="github">
                 <div className="flex items-center ">
-                  <img src='/icons/github.png' className='h-[25px] w-[25px] invert dark:invert-0 hover:scale-[1.1] ease-in-out duration-300 aspect-square'></img>
+                  <img src='/icons/github.png' className='h-[25px] w-[25px] invert dark:invert-0 hover:scale-[1.1] ease-in-out duration-300 aspect-square' alt="github"></img>
                 </div>
               </a>
             </div>

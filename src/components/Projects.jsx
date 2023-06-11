@@ -24,6 +24,7 @@ function Projects() {
                 <img
                   src="/icons/link.png"
                   className="h-4 w-4 invert dark:invert-0"
+                  alt="link"
                 ></img>
               </div>
 

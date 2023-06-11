@@ -51,7 +51,7 @@ function Top() {
     <div className="flex justify-between content-center flex-row gap-7 mt-[20px] sm:mt-[12%] mx-auto px-2">
       <div className="md:flex items-center justify-between w-full flex-row-reverse z-10">
         <img
-          src="/avatar.jpg"
+          src="/avatar.webp"
           className="rounded-xl w-[clamp(175px,25vw,240px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-black opacity-100 shadow-md"
           alt="Avatar"
         ></img>
