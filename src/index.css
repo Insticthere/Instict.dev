@@ -7,8 +7,8 @@
   --pgwidth: 900px;
   --songwidth : calc(-49vw + (var(--pgwidth)*0.5));
   --bgcolor: #111111;
-  --stripe-opacity: 0.06;
-  --stripe-opacity-dark: 0.2;
+  --stripe-opacity: 0.02;
+  --stripe-opacity-dark: 0.09;
 }
 
 @media (max-width: 640px) {
@@ -131,13 +131,13 @@ body, html {
   }
 
   100% {
-    background-size: 40px 40px;
+    background-size: 38px 38px;
   }
 }
 
 @keyframes loop-background {
   0% {
-    background-size: 40px 40px;
+    background-size: 38px 38px;
   }
   100% {
     background-size: 50px 50px;

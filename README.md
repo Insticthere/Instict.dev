@@ -31,4 +31,4 @@ presence and changing your description.
 
 - Now host it to Vercel by following this [guide](https://vercel.com/guides/deploying-react-with-vercel)!
 
-### To add custom description via discord in the [Lanyard Discord](https://discord.gg/lanyard) go to [#kv-commands](https://discord.com/channels/819285379982557265/911712979291086919) and create use `.set description <DESCRIPTION>`
+### To add custom description via discord in the [Lanyard Discord](https://discord.gg/lanyard) go to [#kv-commands](https://discord.com/channels/819285379982557265/911712979291086919) and use command `.set description <DESCRIPTION>`

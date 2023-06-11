@@ -27,7 +27,7 @@ function Projects() {
                 ></img>
               </div>
 
-              <p className="text-sm py-1.5 text-[#9eaab7] dark:text-[#363738]">
+              <p className="text-sm py-1.5 text-[#9eaab7] dark:text-[#2b2b2b]">
               {element.description}
               </p>
               <p className="text-sm">{element.tools}</p>

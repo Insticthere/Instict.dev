@@ -57,21 +57,21 @@ function Activity() {
           {currentTrack ? (
             <div className="pl-1">
             <div className="flex items-center">
-              <div className="text-center mr-4 shrink-0">
+              <div className="text-center mr-4 shrink-0 ">
                 <img
                   src={currentTrack.image}
                   alt="album cover"
-                  className="rounded-md w-[100px] aspect-square"
+                  className="rounded-md w-[110px] aspect-square shadow-xl"
                   rel="preload"
                 />
               </div>
               <div className="flex flex-col justify-between gap-0.5">
                 <a
                   className="font-medium hover:underline block w-fit" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
-                  <p className="text-[24px] leading-tight my-auto min-w-[50px]">{currentTrack.name}</p>
+                  <p className="text-xl sm:text-[22px] leading-tight my-auto min-w-[50px]">{currentTrack.name}</p>
                 </a>
-                <p className="text-gray-400 text-lg dark:text-[#363738]">{currentTrack.artist}</p>
-                <div className="text-gray-400 dark:text-[#363738] flex items-center max-w-[300px]">
+                <p className="text-gray-400 text-lg dark:text-[#2b2b2b]">{currentTrack.artist}</p>
+                <div className="text-gray-400 dark:text-[#2b2b2b] flex items-center max-w-[300px]">
                   <img src='/icons/spotify.png' className='w-[18px] aspect-square sm:w-5 mr-1.5'></img>
                   <p className=" text-base"><span className="underline">{currentTrack.title}</span> on <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" className="hover:underline">Spotify</a></p>
                 </div>

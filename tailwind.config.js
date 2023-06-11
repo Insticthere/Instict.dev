@@ -5,12 +5,5 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      gridTemplateColumns: {
-        'activity': 'repeat(2, minmax(0, auto))'
-      }
-    },
-  },
   plugins: [],
 }

@@ -52,7 +52,7 @@ function Top() {
       <div className="md:flex items-center justify-between w-full flex-row-reverse z-10">
         <img
           src="/avatar.jpg"
-          className="rounded-xl w-[clamp(175px,25vw,240px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-black opacity-100"
+          className="rounded-xl w-[clamp(175px,25vw,240px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-black opacity-100 shadow-md"
           alt="Avatar"
         ></img>
           <div>
@@ -68,7 +68,7 @@ function Top() {
                     style={{ backgroundColor: style.backgroundColor }}
                   ></div>
                   <div>
-                    <p className="pl-2 inline sm:text-base text-sm text-[#9eaab7] dark:text-[#363738]">
+                    <p className="pl-2 inline sm:text-base text-sm text-[#9eaab7] dark:text-[#2b2b2b]">
                       {data.discord_status} ·{" "}
                       {indianTime.format("MMM DD, hh:mm:ss A")}
                     </p>
