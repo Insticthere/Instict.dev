@@ -12,17 +12,18 @@ function Activity() {
   useEffect(() => {
     const fetchCurrentTrack = async () => {
     try {
-      let response = await getNowPlaying(basic, refresh_token);
+      let response = await getNowPlaying(basic, refresh_token);     
 
       if (response.status === 204) {
         let data = await getLastTrack(basic, refresh_token);
+        
 
         if (!data) return;
         const currentTrack = {
           title: "Last Played",
           name: data.items[0].track.name,
           artist: data.items[0].track.artists[0].name,
-          image: data.items[0].track.album.images[0].url,
+          image: data.items[0].track.album.images[0].url || data.items[0].track.album.images[1].url,
           url: data.items[0].track.external_urls.spotify,
         };
 
@@ -35,7 +36,7 @@ function Activity() {
           title: data.is_playing ? "Currently Playing" : "Last Played",
           name: data.item?.name,
           artist: data.item?.artists[0].name,
-          image: data.item?.album.images[0].url,
+          image: data.item?.album.images[1].url || data.item?.album.images[0].url,
           url: data.item?.external_urls.spotify,
         };
         setCurrentTrack(currentTrack);
@@ -80,7 +81,7 @@ function Activity() {
             </div>
           ) : <>
               <a className="font-medium text-lg group gap-2 w-fit flex my-[1%] pl-2" href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer">
-                <img src='/icons/spotify.png' className='h-7 w-7'></img>
+                <img src='/icons/spotify.png' className='h-7 w-7' alt="sptfy"></img>
                     <p className="spotifytext group-hover:underline">Not listening to anything</p>
               </a>
               </>

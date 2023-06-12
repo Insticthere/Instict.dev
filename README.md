@@ -21,7 +21,7 @@ presence and changing your description.
     - Join [Lanyard Discord](https://discord.gg/lanyard) server for getting Discord presence.
     - Use `.env.example` and fill your information by following the [guide](https://dev.to/einargudnig/spotify-now-playing-on-your-website-3026).
     - Edit `data.json` in `src/data` as per your liking.
-    - Edit `vercel.json` to link your projects.
+    - Edit `vercel.json` to link your projects and socials.
 
 - Install dependencies
     - With NPM: `npm run dev` 
