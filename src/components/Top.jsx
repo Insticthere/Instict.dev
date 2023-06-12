@@ -15,6 +15,8 @@ dayjs.tz.setDefault(info.timezn);
 function Top() {
   const [currentTrack, setCurrentTrack] = useState(null);
   const [indianTime, setIndianTime] = useState(dayjs().tz(info.timezn));
+  const [loaded, setLoaded] = useState(false);
+
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -50,15 +52,26 @@ function Top() {
   return (
     <div className="flex justify-between content-center flex-row gap-7 mt-[20px] sm:mt-[10%] mx-auto px-2">
       <div className="md:flex items-center justify-between w-full flex-row-reverse z-10">
-        <img
-          src="/avatar.webp"
-          className="rounded-xl w-[clamp(175px,25vw,240px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-black opacity-100 shadow-md"
-          alt="Avatar"
-        ></img>
+            {loaded ? null : (
+              <img
+              src="/avatar.svg"
+              className="w-[clamp(175px,25vw,240px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-white opacity-100 shadow-md"
+              alt="Avatar"
+            />
+            )}
+            <img
+              style={loaded ? {} : { display: 'none' }}
+              src="/avatar.webp"
+              className="rounded-xl w-[clamp(175px,25vw,240px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-black opacity-100 shadow-md"
+              alt="Avatar"
+              onLoad={() => setLoaded(true)}
+            />
           <div>
             <p className="m-0 leading-[0.95] font-[750] text-[clamp(90px,20vw,150px);] font-['Outfit',sans-serif;]">
               {info.Name}
             </p>
+
+ 
 
             {data ? (
               <div>

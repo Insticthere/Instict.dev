@@ -73,19 +73,36 @@ function Activity() {
                 </a>
                 <p className="text-gray-400 text-lg dark:text-[#2b2b2b]">{currentTrack.artist}</p>
                 <div className="text-gray-400 dark:text-[#2b2b2b] flex items-center max-w-[300px]">
-                  <img src='/icons/spotify.png' className='w-[18px] aspect-square sm:w-5 mr-1.5'></img>
+                  <img src='/icons/spotify.png' className='w-[18px] aspect-square sm:w-5 mr-1.5' alt="sptfy"></img>
                   <p className=" text-base"><span className="underline">{currentTrack.title}</span> on <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" className="hover:underline">Spotify</a></p>
                 </div>
               </div>
             </div> 
             </div>
-          ) : <>
-              <a className="font-medium text-lg group gap-2 w-fit flex my-[1%] pl-2" href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer">
-                <img src='/icons/spotify.png' className='h-7 w-7' alt="sptfy"></img>
-                    <p className="spotifytext group-hover:underline">Not listening to anything</p>
-              </a>
-              </>
-          }
+          ) : 
+          <>
+          <div className="pl-1">
+          <div className="flex items-center">
+            <div className="text-center mr-4 shrink-0">
+              <img
+                src="icons/emptysong.jpg"
+                alt="album cover"
+                className="rounded-md w-[100px] aspect-square shadow-xl"
+                rel="preload"
+              />
+            </div>
+            <div className="flex flex-col justify-between">
+              <p className="text-lg sm:text-[20px] leading-tight my-auto min-w-[50px]">Not listening to anything</p>
+              <p className="text-gray-400 text-lg dark:text-[#2b2b2b]">-</p>
+              <div className="text-gray-400 dark:text-[#2b2b2b] flex items-center max-w-[300px]">
+                <img src='/icons/spotify.png' className='w-[18px] aspect-square sm:w-5 mr-1.5' alt="sptfy"></img>
+                <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" className="hover:underline"><p className=" text-base">No track currently playing</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </>}
+          
         </div>
         <hr className="w-full bg-[#f0f8ff2b] border-none h-[1px] dark:bg-[#0000006b]"></hr>
       </div>
