@@ -24,12 +24,11 @@ function Toptracks(props) {
     
     return (
         <div className="mt-5">
-          <div className="flex items-baseline overflow-hidden ">
-            <h1 className="mt-[10px] mb-[10px] text-xl font-extrabold">Top Tracks</h1>
-            <p className="pl-[5px]"> - {props.name}</p>
+          <div className="mb-[10px] mt-[10px]">
+            <h1 className=" text-xl font-extrabold">{props.name}</h1>
           </div>
           <div className=" md:w-[98vw] ml-[var(--songwidth)] max-md:mx-auto">
-              <div className="grid grid-flow-col grid-rows-2 overflow-x-auto gap-2 scrollbar-hide">
+              <div className="grid grid-flow-col grid-rows-2 overflow-x-auto gap-2">
                 {Toptracks ?  Toptracks.items.map((element, key) => (
                   <a href={element.external_urls.spotify} key={key}>
                     <div className="group col-span-1 row-span-1 snap-start relative overflow-hidden rounded-md ">

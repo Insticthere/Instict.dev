@@ -50,28 +50,29 @@ function Top() {
   };
 
   return (
-    <div className="flex justify-between content-center flex-row gap-7 mt-[20px] sm:mt-[10%] mx-auto px-2">
+    <div className="flex justify-between content-center flex-row gap-7 mt-[20px] sm:mt-[12%] mx-auto px-2">
       <div className="md:flex items-center justify-between w-full flex-row-reverse z-10">
-            {loaded ? null : (
+            <div className="w-[clamp(175px,25vw,240px)] aspect-square bg-transparent">
+              {loaded ? null : (
+                <img
+                src="/avatar.svg"
+                className="w-[clamp(175px,25vw,240px)] aspect-square shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-white opacity-100 shadow-md"
+                alt="Avatar"
+              />
+              )}
               <img
-              src="/avatar.svg"
-              className="w-[clamp(175px,25vw,240px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-white opacity-100 shadow-md"
-              alt="Avatar"
-            />
-            )}
-            <img
-              style={loaded ? {} : { display: 'none' }}
-              src="/avatar.webp"
-              className="rounded-xl w-[clamp(175px,25vw,240px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-black opacity-100 shadow-md"
-              alt="Avatar"
-              onLoad={() => setLoaded(true)}
-            />
+                style={loaded ? {} : { display: 'none' }}
+                src="/avatar.webp"
+                className="rounded-xl aspect-square w-[clamp(175px,25vw,240px)] shrink-1 max-sm:mt-7 max-sm:mb-[5%] bg-black opacity-100 shadow-md"
+                alt="Avatar"
+                onLoad={() => setLoaded(true)}
+              />
+            </div>
+            
           <div>
             <p className="m-0 leading-[0.95] font-[750] text-[clamp(90px,20vw,150px);] font-['Outfit',sans-serif;]">
               {info.Name}
             </p>
-
- 
 
             {data ? (
               <div>
@@ -81,8 +82,8 @@ function Top() {
                     style={{ backgroundColor: style.backgroundColor }}
                   ></div>
                   <div>
-                    <p className="pl-2 inline sm:text-base text-sm text-[#9eaab7] dark:text-[#2b2b2b]">
-                      {data.discord_status} ·{" "}
+                    <p className="pl-1.5 inline sm:text-base text-sm text-[#9eaab7] dark:text-[#2b2b2b]">
+                      {data.discord_status.charAt(0).toUpperCase() + data.discord_status.slice(1)} ·{" "}
                       {indianTime.format("MMM DD, hh:mm:ss A")}
                     </p>
                   </div>

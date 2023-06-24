@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --pgwidth: 900px;
+  --pgwidth: 880px;
   --songwidth : calc(-49vw + (var(--pgwidth)*0.5));
   --bgcolor: #111111;
   --stripe-opacity: 0.02;
@@ -33,8 +33,8 @@ body, html {
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 2px;
   }
 
   *::-webkit-scrollbar-track {

@@ -25,6 +25,7 @@ function Activity() {
           artist: data.items[0].track.artists[0].name,
           image: data.items[0].track.album.images[0].url || data.items[0].track.album.images[1].url,
           url: data.items[0].track.external_urls.spotify,
+          artisturl : data.items[0].track.artists[0].external_urls.spotify
         };
 
         setCurrentTrack(currentTrack);
@@ -38,6 +39,7 @@ function Activity() {
           artist: data.item?.artists[0].name,
           image: data.item?.album.images[1].url || data.item?.album.images[0].url,
           url: data.item?.external_urls.spotify,
+          artisturl : data.items?.artists[0].external_urls.spotify
         };
         setCurrentTrack(currentTrack);
       }
@@ -71,10 +73,12 @@ function Activity() {
                   className="font-medium hover:underline block w-fit" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
                   <p className="text-xl sm:text-[22px] leading-tight my-auto min-w-[50px]">{currentTrack.name}</p>
                 </a>
-                <p className="text-gray-400 text-lg dark:text-[#2b2b2b]">{currentTrack.artist}</p>
+                <a href={currentTrack.artisturl} className="w-fit hover:underline">
+                  <p className="text-gray-400 text-lg dark:text-[#2b2b2b]">{currentTrack.artist}</p>
+                </a>
                 <div className="text-gray-400 dark:text-[#2b2b2b] flex items-center max-w-[300px]">
                   <img src='/icons/spotify.png' className='w-[18px] aspect-square sm:w-5 mr-1.5' alt="sptfy"></img>
-                  <p className=" text-base"><span className="underline">{currentTrack.title}</span> on <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" className="hover:underline">Spotify</a></p>
+                  <p className="text-lg"><span className="underline">{currentTrack.title}</span> on <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" className="hover:underline">Spotify</a></p>
                 </div>
               </div>
             </div> 
@@ -87,7 +91,7 @@ function Activity() {
               <img
                 src="icons/emptysong.jpg"
                 alt="album cover"
-                className="rounded-md w-[100px] aspect-square shadow-xl"
+                className="rounded-md w-[110px] aspect-square shadow-xl"
                 rel="preload"
               />
             </div>
@@ -96,13 +100,12 @@ function Activity() {
               <p className="text-gray-400 text-lg dark:text-[#2b2b2b]">-</p>
               <div className="text-gray-400 dark:text-[#2b2b2b] flex items-center max-w-[300px]">
                 <img src='/icons/spotify.png' className='w-[18px] aspect-square sm:w-5 mr-1.5' alt="sptfy"></img>
-                <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" className="hover:underline"><p className=" text-base">No track currently playing</p></a>
+                <a href="https://open.spotify.com/user/xp36gr2k8ragq465cl5mg2sa9" target="_blank" rel="noopener noreferrer" className="hover:underline"><p className="text-lg">No track currently playing</p></a>
               </div>
             </div>
           </div>
         </div>
-        </>}
-          
+        </>}         
         </div>
         <hr className="w-full bg-[#f0f8ff2b] border-none h-[1px] dark:bg-[#0000006b]"></hr>
       </div>
