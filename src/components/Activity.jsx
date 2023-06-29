@@ -16,7 +16,6 @@ function Activity() {
 
       if (response.status === 204) {
         let data = await getLastTrack(basic, refresh_token);
-        
 
         if (!data) return;
         const currentTrack = {
@@ -39,13 +38,15 @@ function Activity() {
           artist: data.item?.artists[0].name,
           image: data.item?.album.images[1].url || data.item?.album.images[0].url,
           url: data.item?.external_urls.spotify,
-          artisturl : data.items?.artists[0].external_urls.spotify
+          artisturl : data.item?.artists[0].external_urls.spotify
         };
         setCurrentTrack(currentTrack);
       }
     } catch (error) {
       console.log(error)
     }
+
+    console.log(currentTrack)
   };
   
     fetchCurrentTrack();
