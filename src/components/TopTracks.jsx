@@ -60,7 +60,6 @@ function Fallback() {
     </div>)}
     </>
   )
-
 }
 
 // ideas from dan.onl

@@ -45,8 +45,6 @@ function Activity() {
     } catch (error) {
       console.log(error)
     }
-
-    console.log(currentTrack)
   };
   
     fetchCurrentTrack();
@@ -74,7 +72,7 @@ function Activity() {
                   className="font-medium hover:underline block w-fit" href={currentTrack.url} target="_blank" rel="noopener noreferrer">
                   <p className="text-xl sm:text-[22px] leading-tight my-auto min-w-[50px]">{currentTrack.name}</p>
                 </a>
-                <a href={currentTrack.artisturl} className="w-fit hover:underline">
+                <a href={currentTrack.artisturl} className="w-fit hover:underline" target="_blank" rel="noopener noreferrer">
                   <p className="text-gray-400 text-lg dark:text-[#2b2b2b]">{currentTrack.artist}</p>
                 </a>
                 <div className="text-gray-400 dark:text-[#2b2b2b] flex items-center max-w-[300px]">
